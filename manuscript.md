@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/fa038282f17bfe1707a023e99f82f75fa5191f62/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fa038282f17bfe1707a023e99f82f75fa5191f62/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fa038282f17bfe1707a023e99f82f75fa5191f62/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/fa038282f17bfe1707a023e99f82f75fa5191f62/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@fa03828](https://github.com/ccherry2/earthsystemsmodel2/tree/fa038282f17bfe1707a023e99f82f75fa5191f62)
+from [ccherry2/earthsystemsmodel2@ce2d688](https://github.com/ccherry2/earthsystemsmodel2/tree/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3)
 on December 5, 2020.
 </em></small>
 
@@ -165,6 +165,13 @@ While CESM provides the advantage of explicit urban parameterization, it does st
 ##### 2. Random Forest (Selection of Variables)
 
 ##### 3. Random Forest (Minimized Variables)
+
+
+## IV. Results
+
+### A. Metrics
+
+### B. Model Performance
 
 
 ## References {.page_break_before}
