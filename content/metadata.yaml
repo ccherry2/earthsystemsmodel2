@@ -1,26 +1,26 @@
 ---
 title: "Manuscript Title"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - Data
+  - Science
+  - Earth
+  - Systems
+  - Random
+  - Forest
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+  - github: ccherry2
+    name: Charlotte Cherry
+    initials: CC
     affiliations:
-      - Department of Something, University of Whatever
-    funders:
-      - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+      - Department of Civil Engineering, University of Illinois Urbana-Champaign
+  - github: 
+    name: Joyce Yang
+    initials: JY
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Department of Civil Engineering, University of Illinois Urbana-Champaign  
+  - github: Yiwen-Zhang97
+    name: Yiwen Zhang
+    initials: YZ
+    affiliations:
+      - Department of Civil Engineering, University of Illinois Urbana-Champaign
