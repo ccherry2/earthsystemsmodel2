@@ -67,11 +67,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@ce2d688](https://github.com/ccherry2/earthsystemsmodel2/tree/ce2d688d5be00a1277fce3f49ac48e3d7c988cb3)
+from [ccherry2/earthsystemsmodel2@ef18209](https://github.com/ccherry2/earthsystemsmodel2/tree/ef182099e5939dc10fa2d8fc499f943980ed69c8)
 on December 5, 2020.
 </em></small>
 
@@ -172,6 +172,15 @@ While CESM provides the advantage of explicit urban parameterization, it does st
 ### A. Metrics
 
 ### B. Model Performance
+
+
+## V. Discussion and Conclusion
+
+### A. Interpreting Results
+
+### B. What We Learned
+
+### C. Use of Machine Learning for Earth Systems Model Emulation
 
 
 ## References {.page_break_before}
