@@ -1,7 +1,8 @@
 ---
 author-meta:
-- John Doe
-- Jane Roe
+- Charlotte Cherry
+- Joyce Yang
+- Yiwen Zhang
 bibliography:
 - content/manual-references.json
 date-meta: '2020-12-05'
@@ -39,21 +40,17 @@ header-includes: '<!--
 
   <meta name="citation_technical_report_institution" content="Manubot" />
 
-  <meta name="citation_author" content="John Doe" />
+  <meta name="citation_author" content="Charlotte Cherry" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
+  <meta name="citation_author_institution" content="Department of Civil Engineering, University of Illinois Urbana-Champaign" />
 
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Joyce Yang" />
 
-  <meta name="twitter:creator" content="@johndoe" />
+  <meta name="citation_author_institution" content="Department of Civil Engineering, University of Illinois Urbana-Champaign" />
 
-  <meta name="citation_author" content="Jane Roe" />
+  <meta name="citation_author" content="Yiwen Zhang" />
 
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
-
-  <meta name="citation_author_institution" content="Department of Whatever, University of Something" />
-
-  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author_institution" content="Department of Civil Engineering, University of Illinois Urbana-Champaign" />
 
   <link rel="canonical" href="https://ccherry2.github.io/earthsystemsmodel2/" />
 
@@ -67,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/250654c369197cf6b502bb48a38b7acbcc4f915c/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/250654c369197cf6b502bb48a38b7acbcc4f915c/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/250654c369197cf6b502bb48a38b7acbcc4f915c/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -85,9 +82,12 @@ header-includes: '<!--
 
   <!-- end Manubot generated metadata -->'
 keywords:
-- markdown
-- publishing
-- manubot
+- Data
+- Science
+- Earth
+- Systems
+- Random
+- Forest
 lang: en-US
 manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/ef182099e5939dc10fa2d8fc499f943980ed69c8/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/250654c369197cf6b502bb48a38b7acbcc4f915c/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@ef18209](https://github.com/ccherry2/earthsystemsmodel2/tree/ef182099e5939dc10fa2d8fc499f943980ed69c8)
+from [ccherry2/earthsystemsmodel2@250654c](https://github.com/ccherry2/earthsystemsmodel2/tree/250654c369197cf6b502bb48a38b7acbcc4f915c)
 on December 5, 2020.
 </em></small>
 
@@ -113,25 +113,23 @@ on December 5, 2020.
 
 
 
-+ **John Doe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Charlotte Cherry**<br>
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
-    · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [ccherry2](https://github.com/ccherry2)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Department of Civil Engineering, University of Illinois Urbana-Champaign
   </small>
 
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
-    · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
++ **Joyce Yang**<br><br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Department of Civil Engineering, University of Illinois Urbana-Champaign
+  </small>
+
++ **Yiwen Zhang**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [Yiwen-Zhang97](https://github.com/Yiwen-Zhang97)<br>
+  <small>
+     Department of Civil Engineering, University of Illinois Urbana-Champaign
   </small>
 
 
