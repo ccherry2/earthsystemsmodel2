@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@1d6f6b2](https://github.com/ccherry2/earthsystemsmodel2/tree/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84)
+from [ccherry2/earthsystemsmodel2@b0a651a](https://github.com/ccherry2/earthsystemsmodel2/tree/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba)
 on December 6, 2020.
 </em></small>
 
@@ -183,6 +183,7 @@ Therefore, when preparing data for our model we would need to filter the predict
 The next step was to delve into some valuable variables by visualizing them both spatially and temporally to understand the range and distribution, as well as identify anomalous values.  
 
 1. TSA  
+
 Since TSA is our target output, we focused much of our effort on analyzing it.  
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
@@ -201,14 +202,16 @@ We also examined these temperature data spatially to see how the data vary globa
 
 <center>Figure: Maps of TSA in January and June of 2015, 2055 and 2095</center>   
 
-2. Other temperature variables
+2. Other temperature variables  
+
 We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).
 
 Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.
 
 <center>Figure: Maps of TV, TH2OSFC and TBUILD in January of 2015</center>   
 
-3. Some atmospheric forcing variables
+3. Some atmospheric forcing variables  
+
 Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.
 * FSDS (W/m^2): atmospheric incident solar radiation
 * FLDS (W/m^2): atmospheric longwave radiation

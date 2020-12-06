@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84">ccherry2/earthsystemsmodel2@1d6f6b2</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/b0a651a9d22fd1971c3fd82e537ab2e52a07aeba">ccherry2/earthsystemsmodel2@b0a651a</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -124,9 +124,9 @@ Department of Civil Engineering, University of Illinois Urbana-Champaign
 <p>Therefore, when preparing data for our model we would need to filter the predictors to only include forcing variables. We also thought that adding interaction terms between multiple variables (e.g. feature crossings of spatial and time variables such as RAIN*month) in the model would be helpful, and this might be achieved by letting the model learn the relationships by itself without manually specifying them.</p>
 <p>The next step was to delve into some valuable variables by visualizing them both spatially and temporally to understand the range and distribution, as well as identify anomalous values.</p>
 <ol type="1">
-<li>TSA<br />
-Since TSA is our target output, we focused much of our effort on analyzing it.</li>
+<li>TSA</li>
 </ol>
+<p>Since TSA is our target output, we focused much of our effort on analyzing it.</p>
 <p>Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).</p>
 <center>
 Figure: time series plot of global monthly average TSA in urban areas
@@ -144,27 +144,25 @@ Figure: time series plot of the standard deviation of global monthly average TSA
 Figure: Maps of TSA in January and June of 2015, 2055 and 2095
 </center>
 <ol start="2" type="1">
-<li>Other temperature variables
-We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).</li>
+<li>Other temperature variables</li>
 </ol>
+<p>We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).</p>
 <p>Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.</p>
 <center>
 Figure: Maps of TV, TH2OSFC and TBUILD in January of 2015
 </center>
 <ol start="3" type="1">
-<li>Some atmospheric forcing variables
-Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.</li>
+<li>Some atmospheric forcing variables</li>
 </ol>
-<ul>
-<li>FSDS (W/m^2): atmospheric incident solar radiation</li>
-<li>FLDS (W/m^2): atmospheric longwave radiation</li>
-<li>RAIN (mm/s): atmospheric rain, after rain/snow</li>
-<li>TBOT (K): atmospheric air temperature</li>
-<li>PBOT (Pa): atmospheric pressure at surface</li>
-<li>QBOT (kg/kg): atmospheric specific humidity</li>
-<li>U10 (m/s): 10-m wind
-The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.</li>
-</ul>
+<p>Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.
+* FSDS (W/m^2): atmospheric incident solar radiation
+* FLDS (W/m^2): atmospheric longwave radiation
+* RAIN (mm/s): atmospheric rain, after rain/snow
+* TBOT (K): atmospheric air temperature
+* PBOT (Pa): atmospheric pressure at surface
+* QBOT (kg/kg): atmospheric specific humidity
+* U10 (m/s): 10-m wind
+The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.</p>
 <center>
 Figure: correlation matrix of TSA and atmospheric forcing variables
 </center>
