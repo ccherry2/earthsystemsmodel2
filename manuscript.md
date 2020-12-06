@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@3fb0529](https://github.com/ccherry2/earthsystemsmodel2/tree/3fb0529344eeb86665c45d739524eacb655105d9)
+from [ccherry2/earthsystemsmodel2@779599f](https://github.com/ccherry2/earthsystemsmodel2/tree/779599f961e24c45622d96b86003b761c47b839e)
 on December 6, 2020.
 </em></small>
 
