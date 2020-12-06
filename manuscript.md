@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/779599f961e24c45622d96b86003b761c47b839e/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@779599f](https://github.com/ccherry2/earthsystemsmodel2/tree/779599f961e24c45622d96b86003b761c47b839e)
+from [ccherry2/earthsystemsmodel2@d433e51](https://github.com/ccherry2/earthsystemsmodel2/tree/d433e519af2ce4fdfb479d980ef75cf21dac5cbb)
 on December 6, 2020.
 </em></small>
 
@@ -202,3 +202,76 @@ The usefulness of this model and the level of accuracy that an RMSE of 0.20K rep
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
+
+
+## Appendix 1: Variable Definitions
+
+This table includes the full list of variables used in the models created and their definitions and units.
+
+Table A1: Variable Names and Definitions
+| *Variable* | Unit          | Meaning          |
+|:-----------------|:-------------:|:-------------:|
+| *TSA* | *K* | *2m air temperature (target variable)* |
+| ATM_TOPO |  m | Atmospheric surface height | 
+| Day sin | day | Sine of day term |
+| EFLX_LH_TOT | W/m^2 |Total latent heat flux (+ to atm)  |
+| EFLX_LH_TOT_R | W/m^2 | Rural total evaporation |
+| ER | gC/m^2/s | Total ecosystem respiration, autotrophic + heterotrophic |
+| ERRSEB | W/m^2 | Surface energy conservation error |
+| ERRSOL | W/m^2 | Solar radiation conservation error |
+| FCEV | W/m^2 | Canopy evaporation |
+| FCOV | unitless | Fractional impermeable area |
+| FGEV | W/m^2 | Ground evaporation |
+| FH20SFC | unitless | Fraction of ground cover by surface water |
+| FIRA | W/m^2 | Net infrared (longwave) radiation |
+| FIRA_R | W/m^2 | Rural net infrared (longwave) radiation |
+| FIRE |W/m^2  | Emitted infrared (longwave) radiation |
+| FIRE_ICE | W/m^2 | Emitted infrared (longwave) radiation (ice landunits only) |
+| FIRE_R | W/m^2 | Rural emitted infrared (longwave) radiation |
+| FLDS | W/m^2 | Atmospheric longwave radiation |
+| FSA | W/m^2 | Absorbed solar radiation |
+| FSDS | W/m^2 | Atmospheric incident solar radiation |
+| FSDSNI | W/m^2 | Diffuse nir incident solar radiation |
+| FSDSVD | W/m^2 | Direct vis incident solar radiation |
+| FSDSVI | W/m^2 | Diffuse vis incident solar radiation |
+| FSH_G | W/m^2 | Sensible heat from ground |
+| FSH_R | W/m^2 | Rural sensible heat |
+| FSN0 | unitless | Fraction of ground covered by snow |
+| FSR | W/m^2 | Reflected solar radiation |
+| FSRND | W/m^2 | Direct nir reflected solar radiation |
+| FSRNI | W/m^2 | Diffuse nir reflected solar radiation |
+| H20SFC | mm | Surface water depth |
+| HIA | C | 2m NWS Heat Index |
+| HUMIDEX | C | 2m Humidex |
+| lat | degrees_north | Coordinate latitude |
+| long | degrees_east | Coordinate longitude |
+| PBOT | Pa | Atmospheric pressure at surface |
+| Q0VER | mm/s | Surface runoff |
+| Q2M | kg/kg | 2m specific humidity |
+| QBOT | kg/kg | Atmospheric specific humidity |
+| QICE | mm/s | Ice growth/melt |
+| QIRRIG | mm/s | Water added through irrigation |
+| QRUNOFF | mm/s | Total liquid runoff not including correction for land use change |
+| RAIN | mm/s | Atmospheric rain, after rain/snow |
+| RH2M | % | 2m relative humidity |
+| SABG | W/m^2 | Solar rad absorbed by ground |
+| SNOWDP | m | Gridcell mean snow height |
+| SOILWATER_10CM | kg/m2 | Soil liquid water + ice in top 10cm of soil |
+| SWBGT | C | 2m Simplified Wetbulb Globe Temp |
+| SWBGT_R | C | Rural 2m Simplified Wetbulb Globe Temp |
+| SWBGT_U | C | Urban 2m Simplified Wetbulb Globe Temp |
+| TBOT | K | Atmospheric air temperature |
+| TBUILD | K | Internal urban building air temperature |
+| TG | K | Ground temperature |
+| TG_ICE | K | Ground temperature (ice landunits only) |
+| TH20SFC | K | Surface water temperature |
+| THBOT | K | Atmospheric air potential temperature |
+| TOPO_COL_ICE | m | Column-level topographic height |
+| TREFMNAV | K | Daily minimum of average 2m temperature |
+| TREFMXAV | K | Daily maximum of average 2m temperature |
+| TSA_ICE | K | 2m air temperature (ice landunits only) |
+| TSKIN | K | Skin temperature |
+| TSL | K | Temperature of near-surface soil layer |
+| TSOI_10CM | K | Soil temperature in top 10cm of soil |
+
+
