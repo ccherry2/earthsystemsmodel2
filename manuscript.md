@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/530434ab16406cbcbaff73752370d1f283b36383/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/530434ab16406cbcbaff73752370d1f283b36383/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/530434ab16406cbcbaff73752370d1f283b36383/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/530434ab16406cbcbaff73752370d1f283b36383/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@530434a](https://github.com/ccherry2/earthsystemsmodel2/tree/530434ab16406cbcbaff73752370d1f283b36383)
+from [ccherry2/earthsystemsmodel2@149a997](https://github.com/ccherry2/earthsystemsmodel2/tree/149a997231f20ebfcd4abfc1d4349f92e78d7866)
 on December 6, 2020.
 </em></small>
 
@@ -279,6 +279,10 @@ The usefulness of this model and the level of accuracy that an RMSE of 0.20K rep
 ### B. What We Learned
 
 ### C. Use of Machine Learning for Earth Systems Model Emulation
+
+Generally, all the emulators have shown great power in achieving our goal of predicting urban temperatures from earth system models with less computing resources needed. Even the simplest linear regression models showed high accuracy. Nevertheless, we were still able to further boost the performance. We developed a highly credible random forest emulator whose root-mean-squared error was significantly smaller than the urban temperature differences between CESM member runs (~1.5K). As few as 7 variables were needed as inputs to the model. The training time was short, and the fitting time was within a few seconds, which may save decision makers much time in obtaining predictions. This indicates the important role of statistical methods in climate-related research.
+
+However, we should still point out that even though we were able to obtain a very small RMSE with more variables added, some of those variables might not be present in other earth system models. We need to avoid selecting such ones for adaptability to other models. In addition, since all of our data comes from the same earth system model (CESM), it is not clear if the emulator fit by this particular dataset will handle data from other models well. More extreme values of some variables may appear, which may not be well fit in random forest emulators.
 
 
 ## References {.page_break_before}

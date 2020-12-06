@@ -117,6 +117,10 @@ content/04.results.md:19:TSA
 content/04.results.md:20:hyperparameters
 content/05.discussion.md:5:RMSE
 content/05.discussion.md:5:RMSE
+content/05.discussion.md:11:CESM
+content/05.discussion.md:13:CESM
+content/05.discussion.md:13:dataset
+content/05.discussion.md:13:RMSE
 content/07.appendix.md:8:TSA
 content/07.appendix.md:13:autotrophic
 content/07.appendix.md:13:gC
