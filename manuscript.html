@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/d433e519af2ce4fdfb479d980ef75cf21dac5cbb/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/d433e519af2ce4fdfb479d980ef75cf21dac5cbb">ccherry2/earthsystemsmodel2@d433e51</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/1d6f6b2af551ab4cf87acb576e8c7b2850bdbd84">ccherry2/earthsystemsmodel2@1d6f6b2</a>
 on December 6, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -98,6 +98,81 @@ Department of Civil Engineering, University of Illinois Urbana-Champaign
 <p>While CESM provides the advantage of explicit urban parameterization, it does still require significant supercomputing resources, which may limit its usefulness. Therefore, there is a desire to use artificial intelligence to reduce this load. A climate emulator could achieve this by statistically replicating the nonlinear behavior of ESMs more quickly and with less computing power. This project will use machine learning methods to develop a model that can emulate urban temperatures (using other atmospheric forcing variables), where the risk of heat waves in the future could have the greatest negative impacts on human health. This model will be loosely based off of the conceptual framework presented by Zhao et al (2020) - “Global multi-model projections of local urban climates” (currently in press). Urban areas in this dataset refers loosely to areas where people live (i.e., not oceans or uninhabitable areas) but they do not exclusively correspond to cities.</p>
 <h2 id="iii.-methods">III. Methods</h2>
 <h4 id="a.-exploratory-data-analysis-findings">A. Exploratory Data Analysis Findings</h4>
+<p>Exploratory data analysis was performed on the training set to understand the dataset as well as the key variables included and their associated patterns. We also wanted to identify relationships among variables, which we believe will help us choose the best predictors for our model.</p>
+<p>The training dataset contains 486 columns and 392118 rows. It includes the monthly mean of each variable from 2015 to 2100, with one year selected per decade, totaling 108 months. The longitude resolution is 288 pixels, and the latitude resolution is 192 pixels. Only the populated land area is retained. Therefore, each row represents variables in each pixel for each time step. The large number of rows indicates that we have enough samples to train the model. For columns, in addition to the target variable (urban 2-m air temperature or “TSA”) that we want to predict, we still have 485 variables that could be used as inputs to the model. Among those, some are merely descriptive information which do not provide useful clues for predicting TSA, such as current day or nstep, so they can be safely excluded.</p>
+<p>We wanted to further narrow down the range of variables to use as inputs, which was done by identifying the correlation between potential independent variables and the target variable. It was found that variables that were highly correlated with TSA were also temperature variables, many of which were interdependent and would not add much value to the model due to multicollinearity. Those variables are listed below.</p>
+<ul>
+<li>TSA_ICE = 2m air temperature (ice land units only)</li>
+<li>TBOT = atmospheric air temperature</li>
+<li>TG_ICE = ground temperature (ice land units only)</li>
+<li>TV = vegetation temperature</li>
+<li>TSKIN = skin temperature</li>
+<li>THBOT = atmospheric air potential temperature</li>
+<li>TG = ground temperature</li>
+<li>TREFMNAV = daily minimum of average 2-m temperature</li>
+<li>TSL = temperature of near-surface soil layer</li>
+<li>TSOI_10CM = soil temperature in top 10cm of soil</li>
+<li>TREFMXAV = daily maximum of average 2-m temperature</li>
+<li>TH2OSFC = surface water temperature</li>
+<li>TBUILD = internal urban building air temperature</li>
+<li>WA = water in the unconfined aquifer</li>
+<li>ZBOT = atmospheric reference height</li>
+<li>Vcmx25Z = canopy profile of vcmax25</li>
+<li>TOPO_COL_ICE = column-level topographic height</li>
+<li>ZWT_PERCH = perched water table depth</li>
+</ul>
+<p>Therefore, when preparing data for our model we would need to filter the predictors to only include forcing variables. We also thought that adding interaction terms between multiple variables (e.g. feature crossings of spatial and time variables such as RAIN*month) in the model would be helpful, and this might be achieved by letting the model learn the relationships by itself without manually specifying them.</p>
+<p>The next step was to delve into some valuable variables by visualizing them both spatially and temporally to understand the range and distribution, as well as identify anomalous values.</p>
+<ol type="1">
+<li>TSA<br />
+Since TSA is our target output, we focused much of our effort on analyzing it.</li>
+</ol>
+<p>Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).</p>
+<center>
+Figure: time series plot of global monthly average TSA in urban areas
+</center>
+<p>When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.</p>
+<center>
+Figure: maximum, mean and minimum annual temperature trend
+</center>
+<p>The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.</p>
+<center>
+Figure: time series plot of the standard deviation of global monthly average TSA in urban areas
+</center>
+<p>We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.</p>
+<center>
+Figure: Maps of TSA in January and June of 2015, 2055 and 2095
+</center>
+<ol start="2" type="1">
+<li>Other temperature variables
+We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).</li>
+</ol>
+<p>Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.</p>
+<center>
+Figure: Maps of TV, TH2OSFC and TBUILD in January of 2015
+</center>
+<ol start="3" type="1">
+<li>Some atmospheric forcing variables
+Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.</li>
+</ol>
+<ul>
+<li>FSDS (W/m^2): atmospheric incident solar radiation</li>
+<li>FLDS (W/m^2): atmospheric longwave radiation</li>
+<li>RAIN (mm/s): atmospheric rain, after rain/snow</li>
+<li>TBOT (K): atmospheric air temperature</li>
+<li>PBOT (Pa): atmospheric pressure at surface</li>
+<li>QBOT (kg/kg): atmospheric specific humidity</li>
+<li>U10 (m/s): 10-m wind
+The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.</li>
+</ul>
+<center>
+Figure: correlation matrix of TSA and atmospheric forcing variables
+</center>
+<p>We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.</p>
+<center>
+Figure: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015
+</center>
+<p>Overall, we were able to gather useful information from the exploratory data analysis. The data quality was improved by identifying and removing outliers in the dataset. We learned how the temperature changed over the course of the century. We will try different combinations of variables with different algorithms to see how to achieve the best accuracy with the least amount of computing resources.</p>
 <h4 id="b.-preprocessing-data-for-model">B. Preprocessing Data for Model</h4>
 <h4 id="c.-model-testing">C. Model Testing</h4>
 <h5 id="neural-network">1. Neural Network</h5>
