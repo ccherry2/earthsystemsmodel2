@@ -47,3 +47,5 @@ content/04.results.md:19:RMSE
 content/04.results.md:19:TBOT
 content/04.results.md:19:TSA
 content/04.results.md:20:hyperparameters
+content/05.discussion.md:5:RMSE
+content/05.discussion.md:5:RMSE

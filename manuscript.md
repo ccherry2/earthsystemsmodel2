@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/f0192527cde0947a34e53a7b50a16dfb34d14bb1/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/f0192527cde0947a34e53a7b50a16dfb34d14bb1/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/f0192527cde0947a34e53a7b50a16dfb34d14bb1/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/f0192527cde0947a34e53a7b50a16dfb34d14bb1/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/3fb0529344eeb86665c45d739524eacb655105d9/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@f019252](https://github.com/ccherry2/earthsystemsmodel2/tree/f0192527cde0947a34e53a7b50a16dfb34d14bb1)
+from [ccherry2/earthsystemsmodel2@3fb0529](https://github.com/ccherry2/earthsystemsmodel2/tree/3fb0529344eeb86665c45d739524eacb655105d9)
 on December 6, 2020.
 </em></small>
 
@@ -181,7 +181,7 @@ Further model development could investigate the reason for these TSA = NaN value
 For our best model, we would recommend using a random forest machine learning model. Our hyperparameter tuning revealed that the number of trees (n_estimators) had the greatest impact on model error. We were able to achieve optimal results with 300 estimators. The model was not as sensitive to other hyperparameters, such as the maximum leaf nodes or minimum number of samples to split. Not bootstrapping did lead to poorer model performance. With greater computing resources, we would recommend trying a K-fold cross validation along with grid search to truly optimize hyperparameters. However, we found that most of the default hyperparameter settings worked relatively well for our model. 
 Another aspect of model development that strongly influenced performance was variable selections. Our approaches ranged from using only seven common atmospheric variables to using over 40 of the feature columns. In order to improve the adaptability of the model, we did not use all of the features provided, since some of those were outputs of the model (similar to TSA, and likely having the same atmospheric drivers) and others are not commonly used in other earth systems models. In order to maximize the adaptability of the model while minimizing the error, we would recommend using 7-10 common atmospheric variables as features. 
 
-### Future Development 
+### D. Future Development 
 
 In summary, our best model was a random forest model with 300 trees. We cleaned the data by dropping TSA values that were “NaN,” converting time into datetime and extracting the year or transforming the year/month using trigonometric functions, splitting the training and validation data without shuffling (for hyperparameter tuning), filling in NaN values for the feature columns with their mean value, and normalizing the data by mean and standard deviation. We found that most of the default hyperparameter settings worked well for our model, with the exception of the number of trees. Finally, we experimented with a variety of feature column combinations. In the interest of balancing the accuracy and adaptability of the model, we would recommend using some variation of these variables: lat, lon, FSDS (atmospheric incident solar radiation), FLDS (atmospheric longwave radiation), RAIN (atmospheric rain), TBOT (atmospheric air temperature), PBOT (atmospheric pressure at surface), QBOT (atmospheric specific humidity), and U10 (10-m wind), and time feature(s) (year, or trigonometric transformations of year or month, to better represent the cyclical nature of time). By preprocessing and using this model architecture, we were able to achieve a RMSE of less than 0.20 degrees Kelvin. 
 Further development of this model could focus on feature processing/extraction, or general model architecture. It would be interesting to incorporate more spatially explicit features, such as distance to coast, climate zone, etc. Lat/lon information could also be a more predictive feature with further manipulation, such as binning. We would recommend trying different methods of imputing NaN values, which could vary by the reason for the NaN values, and vary by the feature. Different selections and combinations of features could also be explored. After adjusting feature processing/extraction, model architecture and hyperparameters could be further developed. While there is room for further model improvement, our combined findings and recommended model provide a strong starting point for future work. 
@@ -190,6 +190,8 @@ Further development of this model could focus on feature processing/extraction, 
 ## V. Discussion and Conclusion
 
 ### A. Interpreting Results
+
+The usefulness of this model and the level of accuracy that an RMSE of 0.20K represents depends on the desired application. For decision-making purposes, a RMSE of 0.20K is much lower than the uncertainty of future emissions, climate forcing/dynamics, and model structural uncertainty. For stakeholders/policymakers, this model would be most useful for predicting general patterns in urban temperature (both spatially and temporally), rather than for exact quantities. Additionally, it would be very useful in creating large ensemble projections of urban temperature under future climate change. 
 
 ### B. What We Learned
 
