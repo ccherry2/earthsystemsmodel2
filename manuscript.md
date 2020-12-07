@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@6a252e4](https://github.com/ccherry2/earthsystemsmodel2/tree/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3)
+from [ccherry2/earthsystemsmodel2@fba0f6c](https://github.com/ccherry2/earthsystemsmodel2/tree/fba0f6c3366de9ac1ef53138fa01a668355bc1b8)
 on December 7, 2020.
 </em></small>
 
@@ -315,6 +315,7 @@ Three different variable sets were used in these Neural Networks, ranging from 2
 
 </sub>
 As these results show, the neural network actually performed better with fewer variables. The learning rate that worked best was in the middle, while even with more variables and a lower learning rate, the results were not as good. Overall, fewer units in the layers, a higher learning rate, and larger batch size performed better with only 7 variables. Even though some of the models performed better than others, the overall results show that these models fit the data pretty well with all less than 0.5 K difference from the target value, which is not a very significant difference. While the Neural Networks performed nearly as well as the Random Forest models, the Random Forest models demonstrated that they could get even closer to predicting the target value.
+
 
 Further hyperparameter turning and changing the number of variables could produce better results. When the number of epochs was increased for the last iteration, the RMSE went as low as 0.25.
 
