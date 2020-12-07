@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@d5406e0](https://github.com/ccherry2/earthsystemsmodel2/tree/d5406e03af55c52565791790179da3b7c44fdca3)
+from [ccherry2/earthsystemsmodel2@7689dd3](https://github.com/ccherry2/earthsystemsmodel2/tree/7689dd3b9b243676eacdaced81805fc880308bd9)
 on December 7, 2020.
 </em></small>
 
@@ -180,15 +180,23 @@ We wanted to further narrow down the range of variables to use as inputs, which 
 * TOPO_COL_ICE = column-level topographic height
 * ZWT_PERCH = perched water table depth  
 
+A full list of all variables considered in the model is available in the Appendix.
+
 Therefore, when preparing data for our model we would need to filter the predictors to only include forcing variables. We also thought that adding interaction terms between multiple variables (e.g. feature crossings of spatial and time variables such as RAIN*month) in the model would be helpful, and this might be achieved by letting the model learn the relationships by itself without manually specifying them.  
 
 The next step was to delve into some valuable variables by visualizing them both spatially and temporally to understand the range and distribution, as well as identify anomalous values.  
 
-1. TSA  
+#### **1. TSA**
 
 Since TSA is our target output, we focused much of our effort on analyzing it.  
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
+
+<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="700" /> 
+
+*Figure 1: time series plot of global monthly average TSA in urban areas* </center><br> 
+
+
 
 <center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="700" /></center> 
 
@@ -212,7 +220,7 @@ We also examined these temperature data spatially to see how the data vary globa
 
 *<center>Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095</center><br>*   
 
-2. Other temperature variables  
+#### **2. Other temperature variables** 
 
 We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).
 
@@ -222,7 +230,7 @@ Vegetation temperature and surface water temperature had a similar spatial distr
 
 *<center>Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015</center><br>*    
 
-3. Some atmospheric forcing variables  
+#### **3. Some atmospheric forcing variables**
 
 Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.
 
@@ -273,6 +281,7 @@ The hyperparameters were tested and tuned to find the best number of trees to in
 Table 1 below demonstrates the model configurations tested for Random Forest models, including the variables included, the metric, the value of the metric tested, and if any hyperparameter values were changed from the default.
 
 *Table 1: Random Forest Model Configurations and Metrics*
+<sub>
 
 
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         | **Hyperparameters**        |
@@ -285,6 +294,8 @@ Table 1 below demonstrates the model configurations tested for Random Forest mod
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, TBUILD, THBOT, TG, U10 | 10 | RMSE | 0.1075 | Default |
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.1837 | Default |
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.183 | n_estimators = 300 |
+
+</sub>
 
 We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs where more variables were used as inputs. Although there was a run that had more variables included, the results were not as good likely due to variable selection. However, the runs that gave the best results included some variables that are closely tied to temperature and may not be entirely independent. However, even when those variables were removed and the hyperparameters were tuned, the results of the model were quite good. With only 7 independent variables included, the RMSE was only 0.183 K. 
 
@@ -299,6 +310,7 @@ Neural Networks are more computationally demanding to run than Random Forests. S
 Three different variable sets were used in these Neural Networks, ranging from 23 variables to 7 variables. The configurations of the models are shown in Table 2.
 
 *Table 2: Neural Network Model Configurations and Metrics*
+<sub>
 
 
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         |  **Layer Units** | **Hyperparameters**        |
@@ -307,6 +319,7 @@ Three different variable sets were used in these Neural Networks, ranging from 2
 | Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10 | 10 | MAE | 0.482 | 128, 32, 8, 1 | LR=0.1, Epochs=10, Batch_size=10 |
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.304 | 64, 32, 16, 1 | LR=0.008, Epochs=20, Batch_size=5000 |
 
+</sub>
 As these results show, the neural network actually performed better with fewer variables. The learning rate that worked best was in the middle, while even with more variables and a lower learning rate, the results were not as good. Overall, fewer units in the layers, a higher learning rate, and larger batch size performed better with only 7 variables. Even though some of the models performed better than others, the overall results show that these models fit the data pretty well with all less than 0.5 K difference from the target value, which is not a very significant difference. 
 
 Further hyperparameter turning and changing the number of variables could produce better results. When the number of epochs was increased for the last iteration, the RMSE went as low as 0.25.
@@ -386,8 +399,9 @@ Just like Reichstein et al suggested, future studies in earth science offers man
 This table includes the full list of variables used in the models created and their definitions and units.
 
 *Table A1: Variable Names and Definitions*
-
 <sub>
+  
+
 | *Variable* | Unit          | Meaning          |
 |:-----------------|:-------------:|:-------------:|
 | *TSA* | *K* | *2m air temperature (target variable)* |
@@ -452,5 +466,6 @@ This table includes the full list of variables used in the models created and th
 | TSKIN | K | Skin temperature |
 | TSL | K | Temperature of near-surface soil layer |
 | TSOI_10CM | K | Soil temperature in top 10cm of soil |
+
 
 </sub>
