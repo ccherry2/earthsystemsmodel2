@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/4cebfbaf9d1302889bcea8a640f67a8e53abd2c7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/4cebfbaf9d1302889bcea8a640f67a8e53abd2c7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/4cebfbaf9d1302889bcea8a640f67a8e53abd2c7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/4cebfbaf9d1302889bcea8a640f67a8e53abd2c7/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@5d360bf](https://github.com/ccherry2/earthsystemsmodel2/tree/5d360bf64b03e2a7a7e54eb109c16e4f082ed619)
+from [ccherry2/earthsystemsmodel2@4cebfba](https://github.com/ccherry2/earthsystemsmodel2/tree/4cebfbaf9d1302889bcea8a640f67a8e53abd2c7)
 on December 7, 2020.
 </em></small>
 
@@ -190,12 +190,12 @@ Since TSA is our target output, we focused much of our effort on analyzing it.
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
 
-![Time Series of Global Monthly TSA Mean](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png)
+![Time Series of Global Monthly TSA Mean](images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png)
 <center>Figure: time series plot of global monthly average TSA in urban areas</center><br>  
  
 When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.
 
-![TSA range](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/TSA%20range.png)
+![TSA range](images/TSA%20range.png)
 <center>Figure: maximum, mean and minimum annual temperature trend</center><br>     
  
 The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.
@@ -205,7 +205,7 @@ The standard deviation of TSA over time was also assessed, which tended to be hi
 
 We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.
 
-![T2015_2055_2095](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/T2015_2055_2095.png)
+![T2015_2055_2095](images/T2015_2055_2095.png)
 <center>Figure: Maps of TSA in January and June of 2015, 2055 and 2095</center><br>   
 
 2. Other temperature variables  
@@ -214,7 +214,7 @@ We examined other temperature variables that were highly correlated with TSA to 
 
 Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.
 
-![T variables](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/T%20variables.png)
+![T variables](images/T%20variables.png)
 <center>Figure: Maps of TV, TH2OSFC and TBUILD in January of 2015</center><br>    
 
 3. Some atmospheric forcing variables  
@@ -229,12 +229,12 @@ Some atmospheric forcing variables were also worth exploring because they are in
 * U10 (m/s): 10-m wind
 The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.
 
-<center><img src="https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/heatmap.png" width="600" /></center><br>    
+<center><img src="images/heatmap.png" width="600" /></center><br>    
 <center>Figure: correlation matrix of TSA and atmospheric forcing variables</center><br>    
 
 We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.
 
-![Forcing variables](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Forcing%20variables.png)
+![Forcing variables](images/Forcing%20variables.png)
 <center>Figure: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015</center><br>    
 
 Overall, we were able to gather useful information from the exploratory data analysis. The data quality was improved by identifying and removing outliers in the dataset. We learned how the temperature changed over the course of the century. We will try different combinations of variables with different algorithms to see how to achieve the best accuracy with the least amount of computing resources.
