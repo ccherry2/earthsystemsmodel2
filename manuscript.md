@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@83c2501](https://github.com/ccherry2/earthsystemsmodel2/tree/83c2501df8b4f177f84c273214edea237fd60e19)
+from [ccherry2/earthsystemsmodel2@884432b](https://github.com/ccherry2/earthsystemsmodel2/tree/884432b9f93b1bcc6885f5b882326ab2cbfb54ed)
 on December 7, 2020.
 </em></small>
 
@@ -188,22 +188,26 @@ Since TSA is our target output, we focused much of our effort on analyzing it.
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
 
-![Time Series of Global Monthly TSA Mean](images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png)
+<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="600" /></center> 
+
 *<center>Figure 1: time series plot of global monthly average TSA in urban areas</center><br>*  
  
 When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.
 
-![TSA range](images/TSA%20range.png)
+<center><img src="images/TSA%20range.png" width="600" /></center> 
+
 *<center>Figure 2: maximum, mean and minimum annual temperature trend</center><br>*     
  
 The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.
 
-![Time Series of Global Monthly TSA Standard Deviation](images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png)
+<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" width="600" /></center> 
+
 *<center>Figure 3: time series plot of the standard deviation of global monthly average TSA in urban areas</center><br>*     
 
 We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.
 
-![T2015_2055_2095](images/T2015_2055_2095.png)
+<center><img src="images/T2015_2055_2095.png" width="600" /></center> 
+
 *<center>Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095</center><br>*   
 
 2. Other temperature variables  
@@ -212,12 +216,14 @@ We examined other temperature variables that were highly correlated with TSA to 
 
 Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.
 
-![T variables](images/T%20variables.png)
+<center><img src="images/T%20variables.png" width="600" /></center>
+
 *<center>Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015</center><br>*    
 
 3. Some atmospheric forcing variables  
 
 Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.
+
 * FSDS (W/m^2): atmospheric incident solar radiation
 * FLDS (W/m^2): atmospheric longwave radiation
 * RAIN (mm/s): atmospheric rain, after rain/snow
@@ -225,6 +231,7 @@ Some atmospheric forcing variables were also worth exploring because they are in
 * PBOT (Pa): atmospheric pressure at surface
 * QBOT (kg/kg): atmospheric specific humidity
 * U10 (m/s): 10-m wind
+
 The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.
 
 <center><img src="images/heatmap.png" width="600" /></center>   
@@ -233,7 +240,8 @@ The correlation matrix showed that although these variables were not as highly c
 
 We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.
 
-![Forcing variables](images/Forcing%20variables.png)
+<center><img src="images/Forcing%20variables.png" width="600" /></center>
+
 *<center>Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015</center><br>*    
 
 Overall, we were able to gather useful information from the exploratory data analysis. The data quality was improved by identifying and removing outliers in the dataset. We learned how the temperature changed over the course of the century. We will try different combinations of variables with different algorithms to see how to achieve the best accuracy with the least amount of computing resources.
@@ -280,7 +288,8 @@ We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs w
 
 Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.
 
-![NN Setup](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/NN%20Setup.PNG)
+<center><img src="images/NN%20Setup.png" width="600" /></center>   
+
 *<center>Figure 8: Neural Network Model Setup</center><br>* 
 
 Three different variable sets were used in these Neural Networks, ranging from 23 variables to 7 variables. The configurations of the models are shown in Table 2.

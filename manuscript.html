@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/83c2501df8b4f177f84c273214edea237fd60e19">ccherry2/earthsystemsmodel2@83c2501</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/884432b9f93b1bcc6885f5b882326ab2cbfb54ed">ccherry2/earthsystemsmodel2@884432b</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -130,28 +130,36 @@ Department of Civil Engineering, University of Illinois Urbana-Champaign
 </ol>
 <p>Since TSA is our target output, we focused much of our effort on analyzing it.</p>
 <p>Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).</p>
-<img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" alt="Time Series of Global Monthly TSA Mean" />
+<center>
+<img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="600" />
+</center>
 *
 <center>
 Figure 1: time series plot of global monthly average TSA in urban areas
 </center>
 <p><br>*</p>
 <p>When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.</p>
-<img src="images/TSA%20range.png" alt="TSA range" />
+<center>
+<img src="images/TSA%20range.png" width="600" />
+</center>
 *
 <center>
 Figure 2: maximum, mean and minimum annual temperature trend
 </center>
 <p><br>*</p>
 <p>The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.</p>
-<img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" alt="Time Series of Global Monthly TSA Standard Deviation" />
+<center>
+<img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" width="600" />
+</center>
 *
 <center>
 Figure 3: time series plot of the standard deviation of global monthly average TSA in urban areas
 </center>
 <p><br>*</p>
 <p>We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.</p>
-<img src="images/T2015_2055_2095.png" alt="T2015_2055_2095" />
+<center>
+<img src="images/T2015_2055_2095.png" width="600" />
+</center>
 *
 <center>
 Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095
@@ -162,7 +170,9 @@ Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095
 </ol>
 <p>We examined other temperature variables that were highly correlated with TSA to verify the hypothesis of multicollinearity. Variables explored included vegetation temperature (TV), surface water temperature (TH2OSFC), internal urban building air temperature (TBUILD).</p>
 <p>Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.</p>
-<img src="images/T%20variables.png" alt="T variables" />
+<center>
+<img src="images/T%20variables.png" width="600" />
+</center>
 *
 <center>
 Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015
@@ -171,15 +181,17 @@ Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015
 <ol start="3" type="1">
 <li>Some atmospheric forcing variables</li>
 </ol>
-<p>Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.
-* FSDS (W/m^2): atmospheric incident solar radiation
-* FLDS (W/m^2): atmospheric longwave radiation
-* RAIN (mm/s): atmospheric rain, after rain/snow
-* TBOT (K): atmospheric air temperature
-* PBOT (Pa): atmospheric pressure at surface
-* QBOT (kg/kg): atmospheric specific humidity
-* U10 (m/s): 10-m wind
-The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.</p>
+<p>Some atmospheric forcing variables were also worth exploring because they are inputs to every earth system model and provide a lot of information about TSA prediction, although they are not as correlated to TSA as other temperature variables. The variables chosen were according to Zhao et al (2020). The descriptions and units of these variables are listed below.</p>
+<ul>
+<li>FSDS (W/m^2): atmospheric incident solar radiation</li>
+<li>FLDS (W/m^2): atmospheric longwave radiation</li>
+<li>RAIN (mm/s): atmospheric rain, after rain/snow</li>
+<li>TBOT (K): atmospheric air temperature</li>
+<li>PBOT (Pa): atmospheric pressure at surface</li>
+<li>QBOT (kg/kg): atmospheric specific humidity</li>
+<li>U10 (m/s): 10-m wind</li>
+</ul>
+<p>The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.</p>
 <center>
 <img src="images/heatmap.png" width="600" />
 </center>
@@ -189,7 +201,9 @@ Figure 6: correlation matrix of TSA and atmospheric forcing variables
 </center>
 <p><br>*</p>
 <p>We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.</p>
-<img src="images/Forcing%20variables.png" alt="Forcing variables" />
+<center>
+<img src="images/Forcing%20variables.png" width="600" />
+</center>
 *
 <center>
 Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015
@@ -222,7 +236,9 @@ Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 
 <p>We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs where more variables were used as inputs. Although there was a run that had more variables included, the results were not as good likely due to variable selection. However, the runs that gave the best results included some variables that are closely tied to temperature and may not be entirely independent. However, even when those variables were removed and the hyperparameters were tuned, the results of the model were quite good. With only 7 independent variables included, the RMSE was only 0.183 K.</p>
 <h5 id="neural-network"><strong>2. Neural Network</strong></h5>
 <p>Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.</p>
-<img src="https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/NN%20Setup.PNG" alt="NN Setup" />
+<center>
+<img src="images/NN%20Setup.png" width="600" />
+</center>
 *
 <center>
 Figure 8: Neural Network Model Setup
