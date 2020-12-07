@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@d731ec8](https://github.com/ccherry2/earthsystemsmodel2/tree/d731ec85208af57bf9eb2bc8a763cfc500a07a1b)
+from [ccherry2/earthsystemsmodel2@2421ab4](https://github.com/ccherry2/earthsystemsmodel2/tree/2421ab4d8bd287d7bae18918cc0366bfad52d0a6)
 on December 7, 2020.
 </em></small>
 
@@ -295,6 +295,7 @@ Neural Networks are more computationally demanding to run than Random Forests. S
 Three different variable sets were used in these Neural Networks, ranging from 23 variables to 7 variables. The configurations of the models are shown in Table 2.
 
 *Table 2: Neural Network Model Configurations and Metrics*
+
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         |  **Layer Units** | **Hyperparameters**        |
 |-----------------|-------------|:-------------|-------------|-------------|-------------|
 |lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH| 23 | RMSE | 0.44 | 128, 64, 32, 1  | LR=1e-4, Epochs=20, Batch_size=100 |
