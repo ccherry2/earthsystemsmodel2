@@ -5,7 +5,7 @@ author-meta:
 - Yiwen Zhang
 bibliography:
 - content/manual-references.json
-date-meta: '2020-12-06'
+date-meta: '2020-12-07'
 header-includes: '<!--
 
   Manubot generated metadata rendered from header-includes-template.html.
@@ -16,17 +16,17 @@ header-includes: '<!--
 
   <meta name="dc.format" content="text/html" />
 
-  <meta name="dc.title" content="Manuscript Title" />
+  <meta name="dc.title" content="Machine Learning for Earth Systems Model Emulation" />
 
-  <meta name="citation_title" content="Manuscript Title" />
+  <meta name="citation_title" content="Machine Learning for Earth Systems Model Emulation" />
 
-  <meta property="og:title" content="Manuscript Title" />
+  <meta property="og:title" content="Machine Learning for Earth Systems Model Emulation" />
 
-  <meta property="twitter:title" content="Manuscript Title" />
+  <meta property="twitter:title" content="Machine Learning for Earth Systems Model Emulation" />
 
-  <meta name="dc.date" content="2020-12-06" />
+  <meta name="dc.date" content="2020-12-07" />
 
-  <meta name="citation_publication_date" content="2020-12-06" />
+  <meta name="citation_publication_date" content="2020-12-07" />
 
   <meta name="dc.language" content="en-US" />
 
@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -93,7 +93,7 @@ manubot-clear-requests-cache: false
 manubot-output-bibliography: output/references.json
 manubot-output-citekeys: output/citations.tsv
 manubot-requests-cache-path: ci/cache/requests-cache
-title: Manuscript Title
+title: Machine Learning for Earth Systems Model Emulation
 ...
 
 
@@ -103,10 +103,10 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/149a997231f20ebfcd4abfc1d4349f92e78d7866/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@149a997](https://github.com/ccherry2/earthsystemsmodel2/tree/149a997231f20ebfcd4abfc1d4349f92e78d7866)
-on December 6, 2020.
+from [ccherry2/earthsystemsmodel2@504b462](https://github.com/ccherry2/earthsystemsmodel2/tree/504b4621223dfb7bf061cdad3de43b5ffed53ee3)
+on December 7, 2020.
 </em></small>
 
 ## Authors
@@ -120,7 +120,9 @@ on December 6, 2020.
      Department of Civil Engineering, University of Illinois Urbana-Champaign
   </small>
 
-+ **Joyce Yang**<br><br>
++ **Joyce Yang**<br>
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [joyceee916](https://github.com/joyceee916)<br>
   <small>
      Department of Civil Engineering, University of Illinois Urbana-Champaign
   </small>
