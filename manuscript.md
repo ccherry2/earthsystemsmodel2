@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/6de575fe04b83251717920d1d5805a5fe8ffb884/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6de575fe04b83251717920d1d5805a5fe8ffb884/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6de575fe04b83251717920d1d5805a5fe8ffb884/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/6de575fe04b83251717920d1d5805a5fe8ffb884/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/d5406e03af55c52565791790179da3b7c44fdca3/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@6de575f](https://github.com/ccherry2/earthsystemsmodel2/tree/6de575fe04b83251717920d1d5805a5fe8ffb884)
+from [ccherry2/earthsystemsmodel2@d5406e0](https://github.com/ccherry2/earthsystemsmodel2/tree/d5406e03af55c52565791790179da3b7c44fdca3)
 on December 7, 2020.
 </em></small>
 
@@ -190,7 +190,7 @@ Since TSA is our target output, we focused much of our effort on analyzing it.
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
 
-<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="600" /></center> 
+<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="700" /></center> 
 
 *<center>Figure 1: time series plot of global monthly average TSA in urban areas</center><br>*  
  
@@ -202,13 +202,13 @@ When these data are considered throughout the full timeline, there was an upward
  
 The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.
 
-<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" width="600" /></center> 
+<center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" width="700" /></center> 
 
 *<center>Figure 3: time series plot of the standard deviation of global monthly average TSA in urban areas</center><br>*     
 
 We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.
 
-<center><img src="images/T2015_2055_2095.png" width="600" /></center> 
+<center><img src="images/T2015_2055_2095.png" width="700" /></center> 
 
 *<center>Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095</center><br>*   
 
@@ -218,7 +218,7 @@ We examined other temperature variables that were highly correlated with TSA to 
 
 Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.
 
-<center><img src="images/T%20variables.png" width="600" /></center>
+<center><img src="images/T%20variables.png" width="700" /></center>
 
 *<center>Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015</center><br>*    
 
@@ -236,13 +236,13 @@ Some atmospheric forcing variables were also worth exploring because they are in
 
 The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.
 
-<center><img src="images/heatmap.png" width="600" /></center>   
+<center><img src="images/heatmap.png" width="400" /></center>   
 
 *<center>Figure 6: correlation matrix of TSA and atmospheric forcing variables</center><br>*  
 
 We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.
 
-<center><img src="images/Forcing%20variables.png" width="600" /></center>
+<center><img src="images/Forcing%20variables.png" width="700" /></center>
 
 *<center>Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015</center><br>*    
 
@@ -292,7 +292,7 @@ We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs w
 
 Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.
 
-<center><img src="images/NN%20Setup.PNG" width="600" /></center>   
+<center><img src="images/NN%20Setup.PNG" width="700" /></center>   
 
 *<center>Figure 8: Neural Network Model Setup</center><br>* 
 
@@ -347,6 +347,17 @@ The usefulness of this model and the level of accuracy that an RMSE of 0.20K rep
 
 ### B. What We Learned
 
+#### **1. Importance of Variable Selection** 
+
+As we saw from the EDA, there are many variables with multicollinearity. When the correlations were examined, some of the variables were very highly correlated, such as TG or TSKIN. However, it’s important for us to recognize which of these would actually be significant variables to include in the model. While it was tempting to use these to make a model that would have high predictive capability, this would not be valuable from an emulator perspective, and it might give us false confidence in our model. Instead, we needed to identify variables that were likely correlated or had driving capability of TSA but that were truly independent. In addition, we wanted to select variables that could be found in other models so that this approach might be scaled or informative to practical applications.
+We learned through this process that the choice of variables used as the independent input or feature variables is very important. Our approaches ranged from using only seven common atmospheric variables to using over 40 of the columns as feature variables. On one hand, we demonstrated that there are numerous variables that should not be chosen as the input variables because of their close link to the target variable. We expected that including these variables would make it too easy for the model to accurately predict the target. When tried, it is true that including some of these closely linked variables resulted in the best results for the random forest model. However, surprisingly, in some of the model runs, having more variables did not necessarily mean that the model would perform better. For example, the Random Forest model that included the 41 variables performed worse than a model with 10 variables. And, the Neural Network model with the least variables performed best. In
+
+#### **2. Difficulties of Operating on Large Data**
+
+Throughout the modeling process, we faced numerous challenges due to the large size of our input dataset. Opening the files as dataframes or making edits to them was arduous. In addition, it made running the neural network very cumbersome, particularly when the number of feature variables was high. Kaggle often ran out of memory or processing space or the platform would crash before making it through the model, which meant the necessary inputs were lost. These challenges presented limitations on the amount of trials that we could run and it also made it more difficult to run different hyperparameter permutations to improve model tuning.
+
+Future research in this area would likely require greater computing power. While it is still less computationally demanding that the earth systems models themselves, even the files required to run these models are very large and taxing on computer memory when using open-source tools not capable of this level of computing. Therefore, we could probably have achieved better results using additional storage and computing to find even more closely tuned parameters and compare the various model runs more easily.
+
 ### C. Use of Machine Learning for Earth Systems Model Emulation
 
 Generally, all the emulators have shown great power in achieving our goal of predicting urban temperatures from earth system models with less computing resources needed. Even the simplest linear regression models showed high accuracy. Nevertheless, we were still able to further boost the performance with a highly credible random forest emulator whose root-mean-squared error was significantly smaller than the urban temperature differences between CESM member runs (~1.5K). As few as 7 variables were needed as inputs to the model. The training time was short, and the fitting time was within a few seconds, which may save decision makers much time in obtaining predictions. This indicates the important role of statistical methods in climate-related research.
@@ -374,9 +385,9 @@ Just like Reichstein et al suggested, future studies in earth science offers man
 
 This table includes the full list of variables used in the models created and their definitions and units.
 
-Table A1: Variable Names and Definitions
+*Table A1: Variable Names and Definitions*
 
-
+<sub>
 | *Variable* | Unit          | Meaning          |
 |:-----------------|:-------------:|:-------------:|
 | *TSA* | *K* | *2m air temperature (target variable)* |
@@ -442,4 +453,4 @@ Table A1: Variable Names and Definitions
 | TSL | K | Temperature of near-surface soil layer |
 | TSOI_10CM | K | Soil temperature in top 10cm of soil |
 
-
+</sub>
