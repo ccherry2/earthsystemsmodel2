@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/f891dda05ef6528a9bf065ec703be9822035fdf4/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/f891dda05ef6528a9bf065ec703be9822035fdf4/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/f891dda05ef6528a9bf065ec703be9822035fdf4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/f891dda05ef6528a9bf065ec703be9822035fdf4/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@f891dda](https://github.com/ccherry2/earthsystemsmodel2/tree/f891dda05ef6528a9bf065ec703be9822035fdf4)
+from [ccherry2/earthsystemsmodel2@c78ebb8](https://github.com/ccherry2/earthsystemsmodel2/tree/c78ebb8587f6ca2193beb02ffc82474fcce6ab67)
 on December 7, 2020.
 </em></small>
 
@@ -344,7 +344,7 @@ In summary, our best model was a random forest model with 300 trees. We cleaned 
 Further development of this model could focus on feature processing/extraction, or general model architecture improvements. It would be interesting to incorporate more spatially explicit features, such as distance to coast, climate zone, etc. Lat/lon information could also be an important predictive feature with further manipulation, such as binning. We would recommend trying different methods of imputing NaN values, which could vary by the reason for the NaN values, and vary by the feature. Different selections and combinations of features could also be explored. After adjusting feature processing/extraction, model architecture and hyperparameters could be further developed and tested. While there is room for further model improvement, our combined findings and recommended model provide a strong starting point for future work. 
 
 
-## V. Discussion and Conclusion
+## V. Discussion and Conclusion {.page_break_before}
 
 ### A. Interpreting Results
 
