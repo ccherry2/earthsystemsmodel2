@@ -1,5 +1,6 @@
 ---
-title: "Manuscript Title"
+title: "Machine Learning for Earth Systems Model Emulation"
+subtitle: Data Science Final Project - December 6, 2020
 keywords:
   - Data
   - Science
@@ -14,7 +15,7 @@ authors:
     initials: CC
     affiliations:
       - Department of Civil Engineering, University of Illinois Urbana-Champaign
-  - github: 
+  - github: joyceee916
     name: Joyce Yang
     initials: JY
     affiliations:
