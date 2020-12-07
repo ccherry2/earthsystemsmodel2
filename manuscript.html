@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/2421ab4d8bd287d7bae18918cc0366bfad52d0a6">ccherry2/earthsystemsmodel2@2421ab4</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/768e3a83ff4183d4a03d5d2f6ea856f78041742a">ccherry2/earthsystemsmodel2@768e3a8</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -339,71 +339,333 @@ DOI: <a href="https://doi.org/10.1038/s41586-019-0912-1">10.1038/s41586-019-0912
 </div>
 <h2 id="appendix-1-variable-definitions">Appendix 1: Variable Definitions</h2>
 <p>This table includes the full list of variables used in the models created and their definitions and units.</p>
-<p>Table A1: Variable Names and Definitions
-| <em>Variable</em> | Unit | Meaning |
-|:—————–|:————-:|:————-:|
-| <em>TSA</em> | <em>K</em> | <em>2m air temperature (target variable)</em> |
-| ATM_TOPO | m | Atmospheric surface height |
-| Day sin | day | Sine of day term |
-| EFLX_LH_TOT | W/m^2 |Total latent heat flux (+ to atm) |
-| EFLX_LH_TOT_R | W/m^2 | Rural total evaporation |
-| ER | gC/m^2/s | Total ecosystem respiration, autotrophic + heterotrophic |
-| ERRSEB | W/m^2 | Surface energy conservation error |
-| ERRSOL | W/m^2 | Solar radiation conservation error |
-| FCEV | W/m^2 | Canopy evaporation |
-| FCOV | unitless | Fractional impermeable area |
-| FGEV | W/m^2 | Ground evaporation |
-| FH20SFC | unitless | Fraction of ground cover by surface water |
-| FIRA | W/m^2 | Net infrared (longwave) radiation |
-| FIRA_R | W/m^2 | Rural net infrared (longwave) radiation |
-| FIRE |W/m^2 | Emitted infrared (longwave) radiation |
-| FIRE_ICE | W/m^2 | Emitted infrared (longwave) radiation (ice landunits only) |
-| FIRE_R | W/m^2 | Rural emitted infrared (longwave) radiation |
-| FLDS | W/m^2 | Atmospheric longwave radiation |
-| FSA | W/m^2 | Absorbed solar radiation |
-| FSDS | W/m^2 | Atmospheric incident solar radiation |
-| FSDSNI | W/m^2 | Diffuse nir incident solar radiation |
-| FSDSVD | W/m^2 | Direct vis incident solar radiation |
-| FSDSVI | W/m^2 | Diffuse vis incident solar radiation |
-| FSH_G | W/m^2 | Sensible heat from ground |
-| FSH_R | W/m^2 | Rural sensible heat |
-| FSN0 | unitless | Fraction of ground covered by snow |
-| FSR | W/m^2 | Reflected solar radiation |
-| FSRND | W/m^2 | Direct nir reflected solar radiation |
-| FSRNI | W/m^2 | Diffuse nir reflected solar radiation |
-| H20SFC | mm | Surface water depth |
-| HIA | C | 2m NWS Heat Index |
-| HUMIDEX | C | 2m Humidex |
-| lat | degrees_north | Coordinate latitude |
-| long | degrees_east | Coordinate longitude |
-| PBOT | Pa | Atmospheric pressure at surface |
-| Q0VER | mm/s | Surface runoff |
-| Q2M | kg/kg | 2m specific humidity |
-| QBOT | kg/kg | Atmospheric specific humidity |
-| QICE | mm/s | Ice growth/melt |
-| QIRRIG | mm/s | Water added through irrigation |
-| QRUNOFF | mm/s | Total liquid runoff not including correction for land use change |
-| RAIN | mm/s | Atmospheric rain, after rain/snow |
-| RH2M | % | 2m relative humidity |
-| SABG | W/m^2 | Solar rad absorbed by ground |
-| SNOWDP | m | Gridcell mean snow height |
-| SOILWATER_10CM | kg/m2 | Soil liquid water + ice in top 10cm of soil |
-| SWBGT | C | 2m Simplified Wetbulb Globe Temp |
-| SWBGT_R | C | Rural 2m Simplified Wetbulb Globe Temp |
-| SWBGT_U | C | Urban 2m Simplified Wetbulb Globe Temp |
-| TBOT | K | Atmospheric air temperature |
-| TBUILD | K | Internal urban building air temperature |
-| TG | K | Ground temperature |
-| TG_ICE | K | Ground temperature (ice landunits only) |
-| TH20SFC | K | Surface water temperature |
-| THBOT | K | Atmospheric air potential temperature |
-| TOPO_COL_ICE | m | Column-level topographic height |
-| TREFMNAV | K | Daily minimum of average 2m temperature |
-| TREFMXAV | K | Daily maximum of average 2m temperature |
-| TSA_ICE | K | 2m air temperature (ice landunits only) |
-| TSKIN | K | Skin temperature |
-| TSL | K | Temperature of near-surface soil layer |
-| TSOI_10CM | K | Soil temperature in top 10cm of soil |</p>
+<p>Table A1: Variable Names and Definitions</p>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 31%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><em>Variable</em></th>
+<th style="text-align: center;">Unit</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><em>TSA</em></td>
+<td style="text-align: center;"><em>K</em></td>
+<td style="text-align: center;"><em>2m air temperature (target variable)</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ATM_TOPO</td>
+<td style="text-align: center;">m</td>
+<td style="text-align: center;">Atmospheric surface height</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Day sin</td>
+<td style="text-align: center;">day</td>
+<td style="text-align: center;">Sine of day term</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EFLX_LH_TOT</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Total latent heat flux (+ to atm)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EFLX_LH_TOT_R</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Rural total evaporation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ER</td>
+<td style="text-align: center;">gC/m^2/s</td>
+<td style="text-align: center;">Total ecosystem respiration, autotrophic + heterotrophic</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ERRSEB</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Surface energy conservation error</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ERRSOL</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Solar radiation conservation error</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FCEV</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Canopy evaporation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FCOV</td>
+<td style="text-align: center;">unitless</td>
+<td style="text-align: center;">Fractional impermeable area</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FGEV</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Ground evaporation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FH20SFC</td>
+<td style="text-align: center;">unitless</td>
+<td style="text-align: center;">Fraction of ground cover by surface water</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FIRA</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Net infrared (longwave) radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FIRA_R</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Rural net infrared (longwave) radiation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FIRE</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Emitted infrared (longwave) radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FIRE_ICE</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Emitted infrared (longwave) radiation (ice landunits only)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FIRE_R</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Rural emitted infrared (longwave) radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FLDS</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Atmospheric longwave radiation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSA</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Absorbed solar radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSDS</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Atmospheric incident solar radiation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSDSNI</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Diffuse nir incident solar radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSDSVD</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Direct vis incident solar radiation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSDSVI</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Diffuse vis incident solar radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSH_G</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Sensible heat from ground</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSH_R</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Rural sensible heat</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSN0</td>
+<td style="text-align: center;">unitless</td>
+<td style="text-align: center;">Fraction of ground covered by snow</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSR</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Reflected solar radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSRND</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Direct nir reflected solar radiation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSRNI</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Diffuse nir reflected solar radiation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">H20SFC</td>
+<td style="text-align: center;">mm</td>
+<td style="text-align: center;">Surface water depth</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HIA</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">2m NWS Heat Index</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HUMIDEX</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">2m Humidex</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lat</td>
+<td style="text-align: center;">degrees_north</td>
+<td style="text-align: center;">Coordinate latitude</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">long</td>
+<td style="text-align: center;">degrees_east</td>
+<td style="text-align: center;">Coordinate longitude</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PBOT</td>
+<td style="text-align: center;">Pa</td>
+<td style="text-align: center;">Atmospheric pressure at surface</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Q0VER</td>
+<td style="text-align: center;">mm/s</td>
+<td style="text-align: center;">Surface runoff</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Q2M</td>
+<td style="text-align: center;">kg/kg</td>
+<td style="text-align: center;">2m specific humidity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">QBOT</td>
+<td style="text-align: center;">kg/kg</td>
+<td style="text-align: center;">Atmospheric specific humidity</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">QICE</td>
+<td style="text-align: center;">mm/s</td>
+<td style="text-align: center;">Ice growth/melt</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">QIRRIG</td>
+<td style="text-align: center;">mm/s</td>
+<td style="text-align: center;">Water added through irrigation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">QRUNOFF</td>
+<td style="text-align: center;">mm/s</td>
+<td style="text-align: center;">Total liquid runoff not including correction for land use change</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RAIN</td>
+<td style="text-align: center;">mm/s</td>
+<td style="text-align: center;">Atmospheric rain, after rain/snow</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RH2M</td>
+<td style="text-align: center;">%</td>
+<td style="text-align: center;">2m relative humidity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SABG</td>
+<td style="text-align: center;">W/m^2</td>
+<td style="text-align: center;">Solar rad absorbed by ground</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SNOWDP</td>
+<td style="text-align: center;">m</td>
+<td style="text-align: center;">Gridcell mean snow height</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SOILWATER_10CM</td>
+<td style="text-align: center;">kg/m2</td>
+<td style="text-align: center;">Soil liquid water + ice in top 10cm of soil</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SWBGT</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">2m Simplified Wetbulb Globe Temp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SWBGT_R</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">Rural 2m Simplified Wetbulb Globe Temp</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SWBGT_U</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">Urban 2m Simplified Wetbulb Globe Temp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TBOT</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Atmospheric air temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TBUILD</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Internal urban building air temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TG</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Ground temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TG_ICE</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Ground temperature (ice landunits only)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TH20SFC</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Surface water temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">THBOT</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Atmospheric air potential temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TOPO_COL_ICE</td>
+<td style="text-align: center;">m</td>
+<td style="text-align: center;">Column-level topographic height</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TREFMNAV</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Daily minimum of average 2m temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TREFMXAV</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Daily maximum of average 2m temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TSA_ICE</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">2m air temperature (ice landunits only)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TSKIN</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Skin temperature</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TSL</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Temperature of near-surface soil layer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TSOI_10CM</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">Soil temperature in top 10cm of soil</td>
+</tr>
+</tbody>
+</table>
 <!-- default theme -->
 
 <style>

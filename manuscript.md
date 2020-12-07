@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/2421ab4d8bd287d7bae18918cc0366bfad52d0a6/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@2421ab4](https://github.com/ccherry2/earthsystemsmodel2/tree/2421ab4d8bd287d7bae18918cc0366bfad52d0a6)
+from [ccherry2/earthsystemsmodel2@768e3a8](https://github.com/ccherry2/earthsystemsmodel2/tree/768e3a83ff4183d4a03d5d2f6ea856f78041742a)
 on December 7, 2020.
 </em></small>
 
@@ -370,6 +370,8 @@ Just like Reichstein et al suggested, future studies in earth science offers man
 This table includes the full list of variables used in the models created and their definitions and units.
 
 Table A1: Variable Names and Definitions
+
+
 | *Variable* | Unit          | Meaning          |
 |:-----------------|:-------------:|:-------------:|
 | *TSA* | *K* | *2m air temperature (target variable)* |
