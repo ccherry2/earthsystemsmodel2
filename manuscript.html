@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/50f3a207125da3f54fabfbd311bdf6ff5a18fc01/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/50f3a207125da3f54fabfbd311bdf6ff5a18fc01/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/50f3a207125da3f54fabfbd311bdf6ff5a18fc01/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/50f3a207125da3f54fabfbd311bdf6ff5a18fc01/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/50f3a207125da3f54fabfbd311bdf6ff5a18fc01">ccherry2/earthsystemsmodel2@50f3a20</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/6a252e4ae645fefc2b7c8d371ea5b1b3df3b31b3">ccherry2/earthsystemsmodel2@6a252e4</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -191,87 +191,87 @@ Department of Civil Engineering, University of Illinois Urbana-Champaign
 <p>The time variable in the original dataset is a string with all elements of the date included. For some of the models, we wanted to include time as one of the independent variables. Thus, time was converted to datetime and split into multiple columns for day, month, and year. Sine and cosine of these variables were included as variables in some models to represent the cyclical pattern where the last number of one set will be next to the first number of the next. For example, we want to represent December of one year (month 12) next to January of the next year (month 1).</p>
 <p>Another important step that occurred in all of the models was to split the data into training and validation sets. Since the target variable values for the testing dataset are not available, this split is necessary to be able to test the accuracy of the models against a different dataset than the data used to train the model. There were two methods used for splitting the data. In some of the models, the data was split randomly. Alternatively, in some of the random forest models, a different splitting method was used. Since our data resembles a time series, although we were not using it as one, our data follows a cyclical pattern that is relatively consistent through the years. In this type of dataset, if a random set of points are used as the validation set, the pattern would still be evident. The model can easily fill in the gaps. In these cases, it is recommended to make a validation set that is a full section of the data because this will be a better test of the model’s ability to predict the target. Thus, the full data for 2085 and 2095 were used as the validation set in some cases.</p>
 <h4 id="c.-model-development">C. Model Development</h4>
-<p>Choosing the appropriate model type is an important set in the process. Based on the dataset we have and the question we are trying to answer, the two best modeling approaches chosen by our group were Random Forests and Neural Networks because they can both be used for regressions on numerical data like the inputs we have. Our feature variables are simple numerical values and a Random Forest model can identify nonlinear relationships. However, Random Forests are bounded by the range of the highest and lowest labels in the training data. Thus, if we wanted to extrapolate the data we have into the future, this would not be a good option. In addition, Neural Networks are able to recognize patterns in the data and utilize given inputs to produce the output variable of interest. We tried both of these approaches to compare the outcomes.</p>
+<p>Choosing the appropriate model type is an important set in the process. Based on the dataset we have and the question we are trying to answer, the two best modeling approaches chosen by our group were Random Forests and Neural Networks because they can both be used for regressions on numerical data like the inputs we have. Our feature variables are all numerical values. A Random Forest model can identify nonlinear relationships between these many variables. However, Random Forests are bounded by the range of the highest and lowest labels in the training data. Thus, if we wanted to extrapolate the data we have into the future, this would not be a good option. In addition, Neural Networks are able to recognize patterns in the data and utilize given inputs to produce the output variable of interest. We tried both of these approaches to compare the outcomes.</p>
 <h5 id="random-forest"><strong>1. Random Forest</strong></h5>
 <p>Multiple Random Forest modeling approaches were tested using different numbers of input variables and different hyperparameters to understand the effect of these changes on the accuracy of the model predictions. The models were run on the training set and tested on the validation set before finally running the testing data and comparing to the actual values through the Kaggle competition.</p>
 <p>For the accuracy metric, Mean Squared Error was used within the model training. However, the two metrics used for the validation set were Root Mean Squared Error and Mean Absolute Error. It is best to test multiple metrics in case there are tradeoffs between them.</p>
-<p>The hyperparameters were tested and tuned to find the best number of trees to include in the forest, the number of features to include in every split, the maximum number of levels, the minimum samples, and the minimum samples required in each leaf node. A random grid was created with options. Then, these parameters were searched to see if a better combination of hyperparameters was possible. Ultimately, the default hyperparameters worked well for most cases except the n_estimator value which resulted in better model outcomes when changed.</p>
+<p>The hyperparameters were tested and tuned to find the best number of trees to include in the forest, the number of features to include in every split, the maximum number of levels, the minimum samples, and the minimum samples required in each leaf node. A random grid was created with parameter options. Then, these parameters were searched to see if a better combination of hyperparameters was possible. Ultimately, the default hyperparameters worked well for most cases except the n_estimator value which resulted in better model outcomes when changed to 300.</p>
 <p>Table 1 below demonstrates the model configurations tested for Random Forest models, including the variables included, the metric, the value of the metric tested, and if any hyperparameter values were changed from the default.</p>
 <p><em>Table 1: Random Forest Model Configurations and Metrics</em>
 <sub></p>
 <table>
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
+<col style="width: 24%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><strong>Variables</strong></th>
-<th style="text-align: center;"><strong>Variable Count</strong></th>
-<th style="text-align: center;"><strong>Metric</strong></th>
-<th style="text-align: center;"><strong>Value</strong></th>
-<th style="text-align: center;"><strong>Hyperparameters</strong></th>
+<th><strong>Variables</strong></th>
+<th><strong>Variable Count</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Hyperparameters</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">ATM_TOPO, EFLX_LH_TOT, EFLX_LH_TOT_R, ER, ERRSEB, ERRSOL, FCEV, FCOV, FGEV, FH20SFC, FIRA, FIRA_R, FIRE, FIRE_R, FLDS, FSA, FSDS, FSDSNI, FSDSVD, FSDSVI, FSH_G, FSH_R, FSN0, FSR, FSRND, FSRNI, H20SFC, HIA, Q2M, QBOT, QICE, QIRRIG, Q0VER, QRUNOFF, RH2M, SABG, SNOWDP, TG, TH20SFC, THBOT, U10</td>
-<td style="text-align: center;">41</td>
-<td style="text-align: center;">MAE</td>
-<td style="text-align: center;">0.1443</td>
-<td style="text-align: center;">Default</td>
+<td>ATM_TOPO, EFLX_LH_TOT, EFLX_LH_TOT_R, ER, ERRSEB, ERRSOL, FCEV, FCOV, FGEV, FH20SFC, FIRA, FIRA_R, FIRE, FIRE_R, FLDS, FSA, FSDS, FSDSNI, FSDSVD, FSDSVI, FSH_G, FSH_R, FSN0, FSR, FSRND, FSRNI, H20SFC, HIA, Q2M, QBOT, QICE, QIRRIG, Q0VER, QRUNOFF, RH2M, SABG, SNOWDP, TG, TH20SFC, THBOT, U10</td>
+<td>41</td>
+<td>MAE</td>
+<td>0.1443</td>
+<td>Default</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TBOT, TBUILD, TG, TG_ICE, TH2OSFC, THBOT, TOPO_COL_ICE, TREFMNAV, TREFMXAV, TSA_ICE, TSKIN, TSL, TSOI_10CM, TV, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
-<td style="text-align: center;">36</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.086</td>
-<td style="text-align: center;">Default</td>
+<td>lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TBOT, TBUILD, TG, TG_ICE, TH2OSFC, THBOT, TOPO_COL_ICE, TREFMNAV, TREFMXAV, TSA_ICE, TSKIN, TSL, TSOI_10CM, TV, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td>36</td>
+<td>RMSE</td>
+<td>0.086</td>
+<td>Default</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.084</td>
-<td style="text-align: center;">Default</td>
+<td>lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td>23</td>
+<td>RMSE</td>
+<td>0.084</td>
+<td>Default</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">lat, lon, FSA, FSDS, FLDS, PBOT, QBOT, RAIN, RH2M, SABG, U10, ZWT_CH4_UNSAT, ZWT_PERCH</td>
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.44</td>
-<td style="text-align: center;">n_estimators = 300</td>
+<td>lat, lon, FSA, FSDS, FLDS, PBOT, QBOT, RAIN, RH2M, SABG, U10, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td>13</td>
+<td>RMSE</td>
+<td>0.44</td>
+<td>n_estimators = 300</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">MAE</td>
-<td style="text-align: center;">0.299</td>
-<td style="text-align: center;">Tuned</td>
+<td>Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
+<td>10</td>
+<td>MAE</td>
+<td>0.299</td>
+<td>Tuned</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, TBUILD, THBOT, TG, U10</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.1075</td>
-<td style="text-align: center;">Default</td>
+<td>FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, TBUILD, THBOT, TG, U10</td>
+<td>10</td>
+<td>RMSE</td>
+<td>0.1075</td>
+<td>Default</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.1837</td>
-<td style="text-align: center;">Default</td>
+<td>FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td>7</td>
+<td>RMSE</td>
+<td>0.1837</td>
+<td>Default</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.183</td>
-<td style="text-align: center;">n_estimators = 300</td>
+<td>FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td>7</td>
+<td>RMSE</td>
+<td>0.183</td>
+<td>n_estimators = 300</td>
 </tr>
 </tbody>
 </table>
@@ -287,54 +287,54 @@ Department of Civil Engineering, University of Illinois Urbana-Champaign
 <p>Three different variable sets were used in these Neural Networks, ranging from 23 variables to 7 variables. The configurations of the models are shown in Table 2.</p>
 <p><em>Table 2: Neural Network Model Configurations and Metrics</em>
 <sub></p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
+<col style="width: 20%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><strong>Variables</strong></th>
-<th style="text-align: center;"><strong>Variable Count</strong></th>
-<th style="text-align: center;"><strong>Metric</strong></th>
-<th style="text-align: center;"><strong>Value</strong></th>
-<th style="text-align: center;"><strong>Layer Units</strong></th>
-<th style="text-align: center;"><strong>Hyperparameters</strong></th>
+<th><strong>Variables</strong></th>
+<th><strong>Variable Count</strong></th>
+<th><strong>Metric</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Layer Units</strong></th>
+<th><strong>Hyperparameters</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
-<td style="text-align: center;">23</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.44</td>
-<td style="text-align: center;">128, 64, 32, 1</td>
-<td style="text-align: center;">LR=1e-4, Epochs=20, Batch_size=100</td>
+<td>lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td>23</td>
+<td>RMSE</td>
+<td>0.44</td>
+<td>128, 64, 32, 1</td>
+<td>LR=1e-4, Epochs=20, Batch_size=100</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">MAE</td>
-<td style="text-align: center;">0.482</td>
-<td style="text-align: center;">128, 32, 8, 1</td>
-<td style="text-align: center;">LR=0.1, Epochs=10, Batch_size=10</td>
+<td>Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
+<td>10</td>
+<td>MAE</td>
+<td>0.482</td>
+<td>128, 32, 8, 1</td>
+<td>LR=0.1, Epochs=10, Batch_size=10</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">RMSE</td>
-<td style="text-align: center;">0.304</td>
-<td style="text-align: center;">64, 32, 16, 1</td>
-<td style="text-align: center;">LR=0.008, Epochs=20, Batch_size=5000</td>
+<td>FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td>7</td>
+<td>RMSE</td>
+<td>0.304</td>
+<td>64, 32, 16, 1</td>
+<td>LR=0.008, Epochs=20, Batch_size=5000</td>
 </tr>
 </tbody>
 </table>
 <p></sub>
-As these results show, the neural network actually performed better with fewer variables. The learning rate that worked best was in the middle, while even with more variables and a lower learning rate, the results were not as good. Overall, fewer units in the layers, a higher learning rate, and larger batch size performed better with only 7 variables. Even though some of the models performed better than others, the overall results show that these models fit the data pretty well with all less than 0.5 K difference from the target value, which is not a very significant difference.</p>
+As these results show, the neural network actually performed better with fewer variables. The learning rate that worked best was in the middle, while even with more variables and a lower learning rate, the results were not as good. Overall, fewer units in the layers, a higher learning rate, and larger batch size performed better with only 7 variables. Even though some of the models performed better than others, the overall results show that these models fit the data pretty well with all less than 0.5 K difference from the target value, which is not a very significant difference. While the Neural Networks performed nearly as well as the Random Forest models, the Random Forest models demonstrated that they could get even closer to predicting the target value.</p>
 <p>Further hyperparameter turning and changing the number of variables could produce better results. When the number of epochs was increased for the last iteration, the RMSE went as low as 0.25.</p>
 <h2 id="iv.-results">IV. Results</h2>
 <h3 id="a.-overview">A. Overview</h3>
