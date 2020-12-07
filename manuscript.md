@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/81d1e9f1c08e0aea80d3eaeee18125590398f4f7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/81d1e9f1c08e0aea80d3eaeee18125590398f4f7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/81d1e9f1c08e0aea80d3eaeee18125590398f4f7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/81d1e9f1c08e0aea80d3eaeee18125590398f4f7/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@0b96115](https://github.com/ccherry2/earthsystemsmodel2/tree/0b961158934816561a355c71cfd3b7dc801a82d9)
+from [ccherry2/earthsystemsmodel2@81d1e9f](https://github.com/ccherry2/earthsystemsmodel2/tree/81d1e9f1c08e0aea80d3eaeee18125590398f4f7)
 on December 7, 2020.
 </em></small>
 
@@ -140,11 +140,11 @@ on December 7, 2020.
 
 Urban areas take up a relatively small percentage of the Earth’s land cover but have disproportionately large impacts on the climate and on humans. They are major drivers of emissions and climate change, serve as economic and social centers around the world, and house most of the human population. However, the very nature of their small physical footprint makes it challenging to study their impact on humans and the environment accurately and comprehensively.
 
-To grapple with uncertainty and develop climate change mitigation and/or adaptation strategies, it is crucial for policymakers and planners for urban areas to understand different climate projections and scenarios, as well as urban-specific dynamics. Earth Systems Models (ESMs) are complex mathematical models that produce climate projections. They represent physical processes in the atmosphere, ocean, cryosphere, biogeochemical cycling in terrestrial and marine ecosystems, and interactions and feedbacks between these domains. These models are highly computationally demanding – taking long amounts of time and storage capacity to run over timescales of hundreds of years. This can make ESMs impractical for many uses, particularly policy analyses. Interested users may not have the capacity to utilize GCMs on a typical computer or reasonable budget.
+To grapple with uncertainty and develop climate change mitigation and/or adaptation strategies, it is crucial for policymakers and planners for urban areas to understand different climate projections and scenarios, as well as urban-specific dynamics. Earth Systems Models (ESMs) are complex mathematical models that produce climate projections. They represent physical processes in the atmosphere, ocean, cryosphere, biogeochemical cycling in terrestrial and marine ecosystems, and interactions and feedbacks between these domains. These models are highly computationally demanding – taking long amounts of time and storage capacity to run over timescales of hundreds of years. This can make ESMs impractical for many uses, particularly policy analyses. Interested users may not have the capacity to utilize GCMs on a typical computer or reasonable budget. Deep learning has great potential to btter process the large amounts of data and computationally expensive nature of these models (Reichstein et al, 2019) [@reichstein2019]. 
 
 Currently, most state-of-the-art ESMs used today for climate change projections do not explicitly parameterize urban areas, largely due to their small area. While this does not significantly impact the quality of regular or large-scale studies, this lack of explicit parameterization limits our ability to adequately capture unique urban characteristics and dynamics. The Community Earth Systems Model (CESM) is one of the few state-of-the-art ESMs that explicitly parameterizes urban areas, with the latest version even distinguishing between three separate urban density classes. Most quantitative attributions have been typically done for non-urban surfaces, but effective development decisions and local actions to manage risks rely on robust urban climate projections. This is the motivation for us to use CESM, which has a representation of urban areas, to build a location dependent emulator, and apply it to other ESMs in order to get their urban temperature responses.
 
-While CESM provides the advantage of explicit urban parameterization, it does still require significant supercomputing resources, which may limit its usefulness. Therefore, there is a desire to use artificial intelligence to reduce this load. A climate emulator could achieve this by statistically replicating the nonlinear behavior of ESMs more quickly and with less computing power. This project will use machine learning methods to develop a model that can emulate urban temperatures (using other atmospheric forcing variables), where the risk of heat waves in the future could have the greatest negative impacts on human health. This model will be loosely based off of the conceptual framework presented by Zhao et al (2020) - "Global multi-model projections of local urban climates" (currently in press). Urban areas in this dataset refers loosely to areas where people live (i.e., not oceans or uninhabitable areas) but they do not exclusively correspond to cities.
+While CESM provides the advantage of explicit urban parameterization, it does still require significant supercomputing resources, which may limit its usefulness. Therefore, there is a desire to use artificial intelligence to reduce this load. A climate emulator could achieve this by statistically replicating the nonlinear behavior of ESMs more quickly and with less computing power. This project will use machine learning methods to develop a model that can emulate urban temperatures (using other atmospheric forcing variables), where the risk of heat waves in the future could have the greatest negative impacts on human health. This model will be loosely based off of the conceptual framework presented by Zhao et al (2020) - "Global multi-model projections of local urban climates" (currently in press). Urban areas in this dataset refers loosely to areas where people live (i.e., not oceans or uninhabitable areas) but they do not exclusively correspond to cities. 
 
 
 ## III. Methods
@@ -185,22 +185,22 @@ Since TSA is our target output, we focused much of our effort on analyzing it.
 
 Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plots of global monthly mean temperature in urban areas showed seasonal fluctuations. The highest TSA appeared in JJA every year, which might be because there are more urban areas in the northern hemisphere where summer is in JJA. The figure below shows the high and low temperature for each year in our time series, and the flat period in between represents the years where we do not have data (we have data for 1 out of every 10 years).
 
-![Time Series of Global Monthly TSA Mean](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png)
+![Time Series of Global Monthly TSA Mean](images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png)
 *<center>Figure 1: time series plot of global monthly average TSA in urban areas</center><br>*  
  
 When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.
 
-![TSA range](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/TSA%20range.png)
+![TSA range](images/TSA%20range.png)
 *<center>Figure 2: maximum, mean and minimum annual temperature trend</center><br>*     
  
 The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.
 
-![Time Series of Global Monthly TSA Standard Deviation](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png)
+![Time Series of Global Monthly TSA Standard Deviation](images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png)
 *<center>Figure 3: time series plot of the standard deviation of global monthly average TSA in urban areas</center><br>*     
 
 We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.
 
-![T2015_2055_2095](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/T2015_2055_2095.png)
+![T2015_2055_2095](images/T2015_2055_2095.png)
 *<center>Figure 4: Maps of TSA in January and June of 2015, 2055 and 2095</center><br>*   
 
 2. Other temperature variables  
@@ -209,7 +209,7 @@ We examined other temperature variables that were highly correlated with TSA to 
 
 Vegetation temperature and surface water temperature had a similar spatial distribution to TSA, demonstrating high multicollinearity. The internal building air temperature had a very different spatial distribution compared to the vegetation temperature, surface water temperature, and TSA. This was likely because it is not an atmospheric variable and is probably strongly influenced by human decision-making.
 
-![T variables](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/T%20variables.png)
+![T variables](images/T%20variables.png)
 *<center>Figure 5: Maps of TV, TH2OSFC and TBUILD in January of 2015</center><br>*    
 
 3. Some atmospheric forcing variables  
@@ -224,12 +224,12 @@ Some atmospheric forcing variables were also worth exploring because they are in
 * U10 (m/s): 10-m wind
 The correlation matrix showed that although these variables were not as highly correlated with TSA, they were still fairly correlated, especially for TBOT and FLDS.
 
-<center><img src="https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/heatmap.png" width="600" /></center><br>    
-*<center>Figure 6: correlation matrix of TSA and atmospheric forcing variables</center><br>*    
+<center><img src="images/heatmap.png" width="600" /></center><br>
+*<center>Figure 6: correlation matrix of TSA and atmospheric forcing variables</center>*  
 
 We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.
 
-![Forcing variables](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Forcing%20variables.png)
+![Forcing variables](images/Forcing%20variables.png)
 *<center>Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015</center><br>*    
 
 Overall, we were able to gather useful information from the exploratory data analysis. The data quality was improved by identifying and removing outliers in the dataset. We learned how the temperature changed over the course of the century. We will try different combinations of variables with different algorithms to see how to achieve the best accuracy with the least amount of computing resources.
