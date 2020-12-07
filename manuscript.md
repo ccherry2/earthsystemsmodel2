@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/3071f1a96dda0f891acab83fddcc52cec64d61df/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3071f1a96dda0f891acab83fddcc52cec64d61df/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3071f1a96dda0f891acab83fddcc52cec64d61df/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/fba0f6c3366de9ac1ef53138fa01a668355bc1b8/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/3071f1a96dda0f891acab83fddcc52cec64d61df/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@fba0f6c](https://github.com/ccherry2/earthsystemsmodel2/tree/fba0f6c3366de9ac1ef53138fa01a668355bc1b8)
+from [ccherry2/earthsystemsmodel2@3071f1a](https://github.com/ccherry2/earthsystemsmodel2/tree/3071f1a96dda0f891acab83fddcc52cec64d61df)
 on December 7, 2020.
 </em></small>
 
@@ -138,7 +138,7 @@ on December 7, 2020.
 
 ## I. Abstract
 
-Climate change is projected to impose substantial impacts and climate-driven threats to urban areas. Effective development decisions and local actions to manage these risks rely on robust climate projections that are specific to built landscapes. However, there is a near-universal lack of physical-based urban land parameterization in the state-of-the-art Earth system models (ESMs), which hinders them from making such predictions. To enable urban climate projections in ESMs, we built machine learning emulators by utilizing the Community Earth System Model (CESM) simulation results. Specifically, we chose urban 2-m temperature as our target and experimented with different sets of input variables from 485 ones present in the CESM dataset. We found that random forest emulators performed the best with other algorithms (linear regression, neural network) demonstrating high credibility as well. The root-mean-squared error (RMSE) of predictions made by random forest emulators were less than 0.2K. As few as 7 common atmospheric forcing were needed to achieve such good performance. Higher accuracy can be obtained by adding more predictors but might be affected by the absence of these predictors in other ESMs, Therefore, we should find the balance between the adaptability and accuracy of the emulator. There are other potential improvements to be made, including feature engineering, selection of structure, etc. Nevertheless, we believe that machine learning will play an increasingly important role in earth science studies.
+Climate change is projected to impose substantial impacts and climate-driven threats to urban areas. Effective development decisions and local actions to manage these risks rely on robust climate projections that are specific to built landscapes. However, there is a near-universal lack of physical-based urban land parameterization in the state-of-the-art Earth system models (ESMs), which hinders them from making such predictions. To enable urban climate projections in ESMs, we built machine learning emulators by utilizing the Community Earth System Model (CESM) simulation results. Specifically, we chose urban 2-m temperature as our target and experimented with different sets of input variables from the 485 atmospheric variables present in the CESM dataset. We found that random forest emulators performed the best, although other algorithms (linear regression, neural network) demonstrated high credibility as well. The root-mean-squared error (RMSE) of predictions made by random forest emulators were less than 0.2K. As few as 7 common atmospheric forcing variables were needed to achieve such good performance. Higher accuracy could be obtained by adding more predictors but might be affected by the absence of these predictors in other ESMs. Therefore, we should find the balance between the adaptability and accuracy of the emulator. There are other potential improvements to be made, including feature engineering, selection of structure, etc. Nevertheless, we believe that machine learning will play an increasingly important role in earth science studies.
 
 
 ## II. Introduction
@@ -316,10 +316,7 @@ Three different variable sets were used in these Neural Networks, ranging from 2
 </sub>
 As these results show, the neural network actually performed better with fewer variables. The learning rate that worked best was in the middle, while even with more variables and a lower learning rate, the results were not as good. Overall, fewer units in the layers, a higher learning rate, and larger batch size performed better with only 7 variables. Even though some of the models performed better than others, the overall results show that these models fit the data pretty well with all less than 0.5 K difference from the target value, which is not a very significant difference. While the Neural Networks performed nearly as well as the Random Forest models, the Random Forest models demonstrated that they could get even closer to predicting the target value.
 
-
 Further hyperparameter turning and changing the number of variables could produce better results. When the number of epochs was increased for the last iteration, the RMSE went as low as 0.25.
-
-
 
 
 ## IV. Results

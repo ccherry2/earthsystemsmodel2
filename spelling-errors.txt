@@ -40,9 +40,9 @@ geospatial
 Gridcell
 heterotrophic
 HIA
-HUMIDEX
+Humidex
 hyperparameter
-Hyperparameters
+hyperparameters
 Imputer
 JJA
 joyceee
@@ -61,7 +61,7 @@ parameterizations
 parameterizes
 PBOT
 precomputed
-preprocessing
+Preprocessing
 QBOT
 QICE
 QIRRIG

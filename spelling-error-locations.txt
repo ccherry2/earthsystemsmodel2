@@ -230,8 +230,8 @@ content/03.methods.md:160:PBOT
 content/03.methods.md:160:QBOT
 content/03.methods.md:160:RMSE
 content/03.methods.md:160:TBOT
-content/03.methods.md:166:hyperparameter
-content/03.methods.md:166:RMSE
+content/03.methods.md:165:hyperparameter
+content/03.methods.md:165:RMSE
 content/04.results.md:7:Preprocessing
 content/04.results.md:9:dataset
 content/04.results.md:9:dataset
