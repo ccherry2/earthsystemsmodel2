@@ -201,12 +201,8 @@ content/03.methods.md:124:RMSE
 content/03.methods.md:128:dataset
 content/03.methods.md:128:hyperparameters
 content/03.methods.md:128:relu
-content/03.methods.md:131:FLDS
-content/03.methods.md:131:FSDS
-content/03.methods.md:131:PBOT
-content/03.methods.md:131:QBOT
-content/03.methods.md:131:TBOT
-content/03.methods.md:131:TSA
+content/03.methods.md:130:NN
+content/03.methods.md:130:NN
 content/03.methods.md:136:Hyperparameters
 content/03.methods.md:138:FLDS
 content/03.methods.md:138:FSA

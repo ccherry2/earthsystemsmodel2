@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/05fe55c276df3764ac1772712993d7846535a5df/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/05fe55c276df3764ac1772712993d7846535a5df/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/05fe55c276df3764ac1772712993d7846535a5df/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/05fe55c276df3764ac1772712993d7846535a5df/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@05fe55c](https://github.com/ccherry2/earthsystemsmodel2/tree/05fe55c276df3764ac1772712993d7846535a5df)
+from [ccherry2/earthsystemsmodel2@61cc7c6](https://github.com/ccherry2/earthsystemsmodel2/tree/61cc7c6c5ea14026e9981a0329bb418c4e978cf4)
 on December 7, 2020.
 </em></small>
 
@@ -281,8 +281,8 @@ We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs w
 
 Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.
 
-![Forcing variables](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/Forcing%20variables.png)
-*<center>Figure 8: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 2015</center><br>* 
+![NN Setup](https://github.com/ccherry2/earthsystemsmodel2/blob/master/content/images/NN%20Setup.PNG)
+*<center>Figure 8: Neural Network Model Setup</center><br>* 
 
 Three different variable sets were used in these Neural Networks, ranging from 23 variables to 7 variables. The configurations of the models are shown in Table 2.
 

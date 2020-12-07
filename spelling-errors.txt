@@ -40,7 +40,7 @@ heterotrophic
 HIA
 HUMIDEX
 hyperparameter
-hyperparameters
+Hyperparameters
 Imputer
 JJA
 joyceee
@@ -51,6 +51,7 @@ longwave
 multicollinearity
 netcdf
 nir
+NN
 nstep
 NWS
 OSFC
@@ -59,7 +60,7 @@ parameterizations
 parameterizes
 PBOT
 precomputed
-Preprocessing
+preprocessing
 QBOT
 QICE
 QIRRIG
