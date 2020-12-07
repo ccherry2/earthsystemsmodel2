@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/768e3a83ff4183d4a03d5d2f6ea856f78041742a">ccherry2/earthsystemsmodel2@768e3a8</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/e695d5935ae5426f2ca4ef89b144a739c3b71f1a">ccherry2/earthsystemsmodel2@e695d59</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -222,17 +222,83 @@ Figure 7: Maps of TSA, TBOT, FSDS, FLDS, RAIN, PBOT, U10 and QBOT in January of 
 <p>For the accuracy metric, Mean Squared Error was used within the model training. However, the two metrics used for the validation set were Root Mean Squared Error and Mean Absolute Error. It is best to test multiple metrics in case there are tradeoffs between them.</p>
 <p>The hyperparameters were tested and tuned to find the best number of trees to include in the forest, the number of features to include in every split, the maximum number of levels, the minimum samples, and the minimum samples required in each leaf node. A random grid was created with options. Then, these parameters were searched to see if a better combination of hyperparameters was possible. Ultimately, the default hyperparameters worked well for most cases except the n_estimator value which resulted in better model outcomes when changed.</p>
 <p>Table 1 below demonstrates the model configurations tested for Random Forest models, including the variables included, the metric, the value of the metric tested, and if any hyperparameter values were changed from the default.</p>
-<p><em>Table 1: Random Forest Model Configurations and Metrics</em>
-| <strong>Variables</strong> | <strong>Variable Count</strong> | <strong>Metric</strong> | <strong>Value</strong> | <strong>Hyperparameters</strong> |
-|:—————–|:————-:|:————-:|:————-:|:————-:|
-| ATM_TOPO, EFLX_LH_TOT, EFLX_LH_TOT_R, ER, ERRSEB, ERRSOL, FCEV, FCOV, FGEV, FH20SFC, FIRA, FIRA_R, FIRE, FIRE_R, FLDS, FSA, FSDS, FSDSNI, FSDSVD, FSDSVI, FSH_G, FSH_R, FSN0, FSR, FSRND, FSRNI, H20SFC, HIA, Q2M, QBOT, QICE, QIRRIG, Q0VER, QRUNOFF, RH2M, SABG, SNOWDP, TG, TH20SFC, THBOT, U10 | 41 | MAE | 0.1443 | Default |
-| lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TBOT, TBUILD, TG, TG_ICE, TH2OSFC, THBOT, TOPO_COL_ICE, TREFMNAV, TREFMXAV, TSA_ICE, TSKIN, TSL, TSOI_10CM, TV, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH | 36 | RMSE | 0.086 | Default |
-| lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH | 23 | RMSE | 0.084 | Default |
-| lat, lon, FSA, FSDS, FLDS, PBOT, QBOT, RAIN, RH2M, SABG, U10, ZWT_CH4_UNSAT, ZWT_PERCH | 13 | RMSE | 0.44 | n_estimators = 300 |
-| Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10 | 10 | MAE | 0.299 | Tuned |
-| FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, TBUILD, THBOT, TG, U10 | 10 | RMSE | 0.1075 | Default |
-| FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.1837 | Default |
-| FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.183 | n_estimators = 300 |</p>
+<p><em>Table 1: Random Forest Model Configurations and Metrics</em></p>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Variables</strong></th>
+<th style="text-align: center;"><strong>Variable Count</strong></th>
+<th style="text-align: center;"><strong>Metric</strong></th>
+<th style="text-align: center;"><strong>Value</strong></th>
+<th style="text-align: center;"><strong>Hyperparameters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ATM_TOPO, EFLX_LH_TOT, EFLX_LH_TOT_R, ER, ERRSEB, ERRSOL, FCEV, FCOV, FGEV, FH20SFC, FIRA, FIRA_R, FIRE, FIRE_R, FLDS, FSA, FSDS, FSDSNI, FSDSVD, FSDSVI, FSH_G, FSH_R, FSN0, FSR, FSRND, FSRNI, H20SFC, HIA, Q2M, QBOT, QICE, QIRRIG, Q0VER, QRUNOFF, RH2M, SABG, SNOWDP, TG, TH20SFC, THBOT, U10</td>
+<td style="text-align: center;">41</td>
+<td style="text-align: center;">MAE</td>
+<td style="text-align: center;">0.1443</td>
+<td style="text-align: center;">Default</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TBOT, TBUILD, TG, TG_ICE, TH2OSFC, THBOT, TOPO_COL_ICE, TREFMNAV, TREFMXAV, TSA_ICE, TSKIN, TSL, TSOI_10CM, TV, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.086</td>
+<td style="text-align: center;">Default</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.084</td>
+<td style="text-align: center;">Default</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lat, lon, FSA, FSDS, FLDS, PBOT, QBOT, RAIN, RH2M, SABG, U10, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">n_estimators = 300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">MAE</td>
+<td style="text-align: center;">0.299</td>
+<td style="text-align: center;">Tuned</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, TBUILD, THBOT, TG, U10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.1075</td>
+<td style="text-align: center;">Default</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.1837</td>
+<td style="text-align: center;">Default</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.183</td>
+<td style="text-align: center;">n_estimators = 300</td>
+</tr>
+</tbody>
+</table>
 <p>We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs where more variables were used as inputs. Although there was a run that had more variables included, the results were not as good likely due to variable selection. However, the runs that gave the best results included some variables that are closely tied to temperature and may not be entirely independent. However, even when those variables were removed and the hyperparameters were tuned, the results of the model were quite good. With only 7 independent variables included, the RMSE was only 0.183 K.</p>
 <h5 id="neural-network"><strong>2. Neural Network</strong></h5>
 <p>Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.</p>
@@ -248,47 +314,47 @@ Figure 8: Neural Network Model Setup
 <p><em>Table 2: Neural Network Model Configurations and Metrics</em></p>
 <table style="width:100%;">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 15%" />
+<col style="width: 19%" />
 <col style="width: 16%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Variables</strong></th>
-<th><strong>Variable Count</strong></th>
-<th style="text-align: left;"><strong>Metric</strong></th>
-<th><strong>Value</strong></th>
-<th><strong>Layer Units</strong></th>
-<th><strong>Hyperparameters</strong></th>
+<th style="text-align: left;"><strong>Variables</strong></th>
+<th style="text-align: center;"><strong>Variable Count</strong></th>
+<th style="text-align: center;"><strong>Metric</strong></th>
+<th style="text-align: center;"><strong>Value</strong></th>
+<th style="text-align: center;"><strong>Layer Units</strong></th>
+<th style="text-align: center;"><strong>Hyperparameters</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
-<td>23</td>
-<td style="text-align: left;">RMSE</td>
-<td>0.44</td>
-<td>128, 64, 32, 1</td>
-<td>LR=1e-4, Epochs=20, Batch_size=100</td>
+<td style="text-align: left;">lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.44</td>
+<td style="text-align: center;">128, 64, 32, 1</td>
+<td style="text-align: center;">LR=1e-4, Epochs=20, Batch_size=100</td>
 </tr>
 <tr class="even">
-<td>Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
-<td>10</td>
-<td style="text-align: left;">MAE</td>
-<td>0.482</td>
-<td>128, 32, 8, 1</td>
-<td>LR=0.1, Epochs=10, Batch_size=10</td>
+<td style="text-align: left;">Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">MAE</td>
+<td style="text-align: center;">0.482</td>
+<td style="text-align: center;">128, 32, 8, 1</td>
+<td style="text-align: center;">LR=0.1, Epochs=10, Batch_size=10</td>
 </tr>
 <tr class="odd">
-<td>FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
-<td>7</td>
-<td style="text-align: left;">RMSE</td>
-<td>0.304</td>
-<td>64, 32, 16, 1</td>
-<td>LR=0.008, Epochs=20, Batch_size=5000</td>
+<td style="text-align: left;">FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">RMSE</td>
+<td style="text-align: center;">0.304</td>
+<td style="text-align: center;">64, 32, 16, 1</td>
+<td style="text-align: center;">LR=0.008, Epochs=20, Batch_size=5000</td>
 </tr>
 </tbody>
 </table>

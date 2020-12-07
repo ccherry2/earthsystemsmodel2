@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/768e3a83ff4183d4a03d5d2f6ea856f78041742a/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/e695d5935ae5426f2ca4ef89b144a739c3b71f1a/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@768e3a8](https://github.com/ccherry2/earthsystemsmodel2/tree/768e3a83ff4183d4a03d5d2f6ea856f78041742a)
+from [ccherry2/earthsystemsmodel2@e695d59](https://github.com/ccherry2/earthsystemsmodel2/tree/e695d5935ae5426f2ca4ef89b144a739c3b71f1a)
 on December 7, 2020.
 </em></small>
 
@@ -271,6 +271,8 @@ The hyperparameters were tested and tuned to find the best number of trees to in
 Table 1 below demonstrates the model configurations tested for Random Forest models, including the variables included, the metric, the value of the metric tested, and if any hyperparameter values were changed from the default.
 
 *Table 1: Random Forest Model Configurations and Metrics*
+
+
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         | **Hyperparameters**        |
 |:-----------------|:-------------:|:-------------:|:-------------:|:-------------:|
 | ATM_TOPO, EFLX_LH_TOT, EFLX_LH_TOT_R, ER, ERRSEB, ERRSOL, FCEV, FCOV, FGEV, FH20SFC, FIRA, FIRA_R, FIRE, FIRE_R, FLDS, FSA, FSDS, FSDSNI, FSDSVD, FSDSVI, FSH_G, FSH_R, FSN0, FSR, FSRND, FSRNI, H20SFC, HIA, Q2M, QBOT, QICE, QIRRIG, Q0VER, QRUNOFF, RH2M, SABG, SNOWDP, TG, TH20SFC, THBOT, U10 | 41 | MAE | 0.1443  | Default |
@@ -296,8 +298,9 @@ Three different variable sets were used in these Neural Networks, ranging from 2
 
 *Table 2: Neural Network Model Configurations and Metrics*
 
+
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         |  **Layer Units** | **Hyperparameters**        |
-|-----------------|-------------|:-------------|-------------|-------------|-------------|
+|:-----------------|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 |lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH| 23 | RMSE | 0.44 | 128, 64, 32, 1  | LR=1e-4, Epochs=20, Batch_size=100 |
 | Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10 | 10 | MAE | 0.482 | 128, 32, 8, 1 | LR=0.1, Epochs=10, Batch_size=10 |
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.304 | 64, 32, 16, 1 | LR=0.008, Epochs=20, Batch_size=5000 |
