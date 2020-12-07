@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/61cc7c6c5ea14026e9981a0329bb418c4e978cf4/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@61cc7c6](https://github.com/ccherry2/earthsystemsmodel2/tree/61cc7c6c5ea14026e9981a0329bb418c4e978cf4)
+from [ccherry2/earthsystemsmodel2@71d6ebd](https://github.com/ccherry2/earthsystemsmodel2/tree/71d6ebd5fb724837e629eaa313d52ab34144202d)
 on December 7, 2020.
 </em></small>
 
@@ -253,7 +253,7 @@ Another important step that occurred in all of the models was to split the data 
 
 Choosing the appropriate model type is an important set in the process. Based on the dataset we have and the question we are trying to answer, the two best modeling approaches chosen by our group were Random Forests and Neural Networks because they can both be used for regressions on numerical data like the inputs we have. Our feature variables are simple numerical values and a Random Forest model can identify nonlinear relationships. However, Random Forests are bounded by the range of the highest and lowest labels in the training data. Thus, if we wanted to extrapolate the data we have into the future, this would not be a good option. In addition, Neural Networks are able to recognize patterns in the data and utilize given inputs to produce the output variable of interest. We tried both of these approaches to compare the outcomes.
 
-##### 1. Random Forest 
+##### **1. Random Forest** 
 
 Multiple Random Forest modeling approaches were tested using different numbers of input variables and different hyperparameters to understand the effect of these changes on the accuracy of the model predictions. The models were run on the training set and tested on the validation set before finally running the testing data and comparing to the actual values through the Kaggle competition. 
 
@@ -277,7 +277,7 @@ Table 1 below demonstrates the model configurations tested for Random Forest mod
 
 We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs where more variables were used as inputs. Although there was a run that had more variables included, the results were not as good likely due to variable selection. However, the runs that gave the best results included some variables that are closely tied to temperature and may not be entirely independent. However, even when those variables were removed and the hyperparameters were tuned, the results of the model were quite good. With only 7 independent variables included, the RMSE was only 0.183 K. 
 
-##### 2. Neural Network
+##### **2. Neural Network**
 
 Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.
 
