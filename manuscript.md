@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/905c8e147bf339a60e565d17f3fd429505d57a96/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/905c8e147bf339a60e565d17f3fd429505d57a96/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/905c8e147bf339a60e565d17f3fd429505d57a96/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/c78ebb8587f6ca2193beb02ffc82474fcce6ab67/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/905c8e147bf339a60e565d17f3fd429505d57a96/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@c78ebb8](https://github.com/ccherry2/earthsystemsmodel2/tree/c78ebb8587f6ca2193beb02ffc82474fcce6ab67)
+from [ccherry2/earthsystemsmodel2@905c8e1](https://github.com/ccherry2/earthsystemsmodel2/tree/905c8e147bf339a60e565d17f3fd429505d57a96)
 on December 7, 2020.
 </em></small>
 
@@ -152,10 +152,10 @@ Currently, most state-of-the-art ESMs used today for climate change projections 
 While CESM provides the advantage of explicit urban parameterization, it does still require significant supercomputing resources, which may limit its usefulness. Therefore, there is a desire to use artificial intelligence to reduce this load. A climate emulator could achieve this by statistically replicating the nonlinear behavior of ESMs more quickly and with less computing power. This project will use machine learning methods to develop a model that can emulate urban temperatures (using other atmospheric forcing variables), where the risk of heat waves in the future could have the greatest negative impacts on human health. This model will be loosely based off of the conceptual framework presented by Zhao et al (2020) - "Global multi-model projections of local urban climates" (currently in press). Urban areas in this dataset refer loosely to areas where people live (i.e., not oceans or uninhabitable areas) but they do not exclusively correspond to cities. 
 
 
-## III. Methods {.page_break_before}
+## III. Methods
 
 #### A. Exploratory Data Analysis Findings
-Exploratory data analysis was performed on the training set to understand the dataset as well as the key variables included and their associated patterns. We also wanted to identify relationships among variables, which we believe will help us choose the best predictors for our model.
+Exploratory data analysis was performed to understand the dataset as well as the key variables included and their associated patterns. We also wanted to identify relationships among variables, which we believe will help us choose the best predictors for our model.
 
 The training dataset contains 486 columns and 392118 rows. It includes the monthly mean of each variable from 2015 to 2100, with one year selected per decade, totaling 108 months. The longitude resolution is 288 pixels, and the latitude resolution is 192 pixels. Only the populated land area is retained. Therefore, each row represents variables in each pixel for each time step. The large number of rows indicates that we have enough samples to train the model. For columns, in addition to the target variable (urban 2-m air temperature or “TSA”) that we want to predict, we still have 485 variables that could be used as inputs to the model. Among those, some are merely descriptive information which do not provide useful clues for predicting TSA, such as current day or nstep, so they can be safely excluded.  
 
@@ -194,19 +194,19 @@ Some NAN values of TSA from 2035-08 and 2035-09 were cleaned up. Time series plo
 
 <center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Mean.png" width="700" /> 
 
-*Figure 1: time series plot of global monthly average TSA in urban areas* </center><br> 
+*Figure 1: Time series plot of global monthly average TSA in urban areas* </center><br> 
  
 When these data are considered throughout the full timeline, there was an upward trend in the maximum, mean, and minimum annual temperature over the time range of projections. This climate change trend is something we would want to be able to capture in our model.
 
 <center><img src="images/TSA%20range.png" width="600" />
 
-*Figure 2: maximum, mean and minimum annual temperature trend* </center><br>   
+*Figure 2: Maximum, mean and minimum annual temperature trend* </center><br>   
  
 The standard deviation of TSA over time was also assessed, which tended to be higher in DJF than in JJA, and the magnitude did not seem to change significantly. This suggested that the underlying drivers of TSA may remain steady, even as the overall average increases.
 
 <center><img src="images/Time%20Series%20of%20Global%20Monthly%20TSA%20Standard%20Deviation.png" width="700" />
 
-*Figure 3: time series plot of the standard deviation of global monthly average TSA in urban areas* </center><br>  
+*Figure 3: Time series plot of the standard deviation of global monthly average TSA in urban areas* </center><br>  
 
 We also examined these temperature data spatially to see how the data vary globally. As expected, the figure below shows the seasonal patterns between the northern and southern hemispheres, as well as higher temperatures near the equator. These spatial patterns of temperature in 2015, 2055 and 2095 remain similar but it is clear that warming is occurring. In particular, the Indian subcontinent appears to become warmer in the series of maps. It is also important to note that the majority of our data points are located in the northern hemisphere.
 
@@ -240,7 +240,7 @@ The correlation matrix showed that although these variables were not as highly c
 
 <center><img src="images/heatmap.png" width="400" />
 
-*Figure 6: correlation matrix of TSA and atmospheric forcing variables* </center><br> 
+*Figure 6: Correlation matrix of TSA and atmospheric forcing variables* </center><br> 
 
 We compared the spatial pattern of these variables to that of TSA, taking January 2015 as an example. The patterns of TBOT, FSDS, FLDS and QBOT were similar to those of TSA, whose values were larger near the equator and decreased with the increase of latitude. Other variables (RAIN, PBOT, U10) did not have clear spatial patterns, which made sense since they were not related to geospatial attributes.
 
@@ -254,7 +254,7 @@ Overall, we were able to gather useful information from the exploratory data ana
 
 Based on the EDA, we gained some clarity about what type of preprocessing was necessary. For all of the models, NaN values for the target variable (TSA) were removed from the training set. However, the EDA also showed a set of major outliers in 2035 that were highly negative. While the initial instinct was to remove these values from the dataset, upon further inspection it was clear that these outliers were matched with outliers in other correlated temperature variables such as TG. These same patterns were observed in the independent variables of the test dataset, which implied that the same outliers likely appear in the target variable of the test set. Since all values in the test set need to be predicted, even the outliers, it is important to keep these anomalous values in the training set so that they are also reflected in the testing set. In the ideal world, all of these values would be removed from training and testing data but this is not possible since we could not edit the number of rows in the testing data used for the Kaggle competition.  
 
-All models also included a step using sklearn’s “SimpleImputer” to fill missing values in the independent variables. The command filled missing values using the default, which is to use the mean of the column to fill the missing value. In addition, the training and testing data were normalized using the mean and standard of each of the variables.
+All models also included a step using sklearn’s “SimpleImputer” to fill missing values in the independent variables. The command filled missing values using the default, which is to use the mean of the column to fill the missing value. In addition, the training and testing data were normalized using the mean and standard deviation of each of the variables.
 
 The time variable in the original dataset is a string with all elements of the date included. For some of the models, we wanted to include time as one of the independent variables. Thus, time was converted to datetime and split into multiple columns for day, month, and year. Sine and cosine of these variables were included as variables in some models to represent the cyclical pattern where the last number of one set will be next to the first number of the next. For example, we want to represent December of one year (month 12) next to January of the next year (month 1).
 
@@ -386,7 +386,7 @@ Just like Reichstein et al. suggested, future studies in earth science offer man
 [@Reichstein2019]: doi:10.1038/s41586-019-0912-1
 
 
-## Appendix: Variable Definitions
+## Appendix: Variable Definitions {.page_break_before}
 
 This table includes the full list of variables used in the models created and their definitions and units.
 

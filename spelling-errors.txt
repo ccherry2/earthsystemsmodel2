@@ -39,9 +39,9 @@ geospatial
 Gridcell
 heterotrophic
 HIA
-HUMIDEX
+Humidex
 hyperparameter
-hyperparameters
+Hyperparameters
 Imputer
 JJA
 joyceee
