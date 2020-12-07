@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/0e5d50feccab88fe3d851397e1baf08c9d3735e7/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0e5d50feccab88fe3d851397e1baf08c9d3735e7/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0e5d50feccab88fe3d851397e1baf08c9d3735e7/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/504b4621223dfb7bf061cdad3de43b5ffed53ee3/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/0e5d50feccab88fe3d851397e1baf08c9d3735e7/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@504b462](https://github.com/ccherry2/earthsystemsmodel2/tree/504b4621223dfb7bf061cdad3de43b5ffed53ee3)
+from [ccherry2/earthsystemsmodel2@0e5d50f](https://github.com/ccherry2/earthsystemsmodel2/tree/0e5d50feccab88fe3d851397e1baf08c9d3735e7)
 on December 7, 2020.
 </em></small>
 
@@ -291,6 +291,9 @@ However, we should still point out that even though we were able to obtain a ver
 
 <!-- Explicitly insert bibliography here -->
 <div id="refs"></div>
+[@Castruccio2014]: doi:10.1175/JCLI-D-13-00099.1
+[@Grimmond2011]: doi:10.1002/joc.2227
+[@Reichstein2019] doi:10.1038/s41586-019-0912-1
 
 
 ## Appendix 1: Variable Definitions
