@@ -9,6 +9,7 @@ csv
 dataset
 datetime
 DJF
+downscaling
 EFLX
 ERRSEB
 ERRSOL
@@ -36,7 +37,7 @@ geospatial
 Gridcell
 heterotrophic
 HIA
-Humidex
+HUMIDEX
 hyperparameter
 hyperparameters
 Imputer
@@ -52,13 +53,16 @@ nstep
 NWS
 OSFC
 parameterization
+parameterizations
 parameterizes
 PBOT
+precomputed
 Preprocessing
 QBOT
 QICE
 QIRRIG
 QRUNOFF
+Reichstein
 RMSE
 SABG
 SFC

@@ -50,9 +50,9 @@
   <meta name="citation_fulltext_html_url" content="https://ccherry2.github.io/earthsystemsmodel2/" />
   <meta name="citation_pdf_url" content="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/34c8292680d9317437d3a65bb8381b3afb9d87e3/" />
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/34c8292680d9317437d3a65bb8381b3afb9d87e3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/34c8292680d9317437d3a65bb8381b3afb9d87e3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -66,9 +66,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/34c8292680d9317437d3a65bb8381b3afb9d87e3/">permalink</a>)
+(<a href="https://ccherry2.github.io/earthsystemsmodel2/v/5d360bf64b03e2a7a7e54eb109c16e4f082ed619/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/34c8292680d9317437d3a65bb8381b3afb9d87e3">ccherry2/earthsystemsmodel2@34c8292</a>
+from <a href="https://github.com/ccherry2/earthsystemsmodel2/tree/5d360bf64b03e2a7a7e54eb109c16e4f082ed619">ccherry2/earthsystemsmodel2@5d360bf</a>
 on December 7, 2020.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -213,12 +213,31 @@ Further development of this model could focus on feature processing/extraction, 
 <p>The usefulness of this model and the level of accuracy that an RMSE of 0.20K represents depends on the desired application. For decision-making purposes, a RMSE of 0.20K is much lower than the uncertainty of future emissions, climate forcing/dynamics, and model structural uncertainty. For stakeholders/policymakers, this model would be most useful for predicting general patterns in urban temperature (both spatially and temporally), rather than for exact quantities. Additionally, it would be very useful in creating large ensemble projections of urban temperature under future climate change.</p>
 <h3 id="b.-what-we-learned">B. What We Learned</h3>
 <h3 id="c.-use-of-machine-learning-for-earth-systems-model-emulation">C. Use of Machine Learning for Earth Systems Model Emulation</h3>
-<p>Generally, all the emulators have shown great power in achieving our goal of predicting urban temperatures from earth system models with less computing resources needed. Even the simplest linear regression models showed high accuracy. Nevertheless, we were still able to further boost the performance. We developed a highly credible random forest emulator whose root-mean-squared error was significantly smaller than the urban temperature differences between CESM member runs (~1.5K). As few as 7 variables were needed as inputs to the model. The training time was short, and the fitting time was within a few seconds, which may save decision makers much time in obtaining predictions. This indicates the important role of statistical methods in climate-related research.</p>
-<p>However, we should still point out that even though we were able to obtain a very small RMSE with more variables added, some of those variables might not be present in other earth system models. We need to avoid selecting such ones for adaptability to other models. In addition, since all of our data comes from the same earth system model (CESM), it is not clear if the emulator fit by this particular dataset will handle data from other models well. More extreme values of some variables may appear, which may not be well fit in random forest emulators.</p>
+<p>Generally, all the emulators have shown great power in achieving our goal of predicting urban temperatures from earth system models with less computing resources needed. Even the simplest linear regression models showed high accuracy. Nevertheless, we were still able to further boost the performance with a highly credible random forest emulator whose root-mean-squared error was significantly smaller than the urban temperature differences between CESM member runs (~1.5K). As few as 7 variables were needed as inputs to the model. The training time was short, and the fitting time was within a few seconds, which may save decision makers much time in obtaining predictions. This indicates the important role of statistical methods in climate-related research.</p>
+<p>In fact, other studies have also proposed statistical approaches that took a small set of precomputed runs of global climate models to build an emulator which produced climate outputs. <span class="citation" data-cites="vv6urccb">[<a href="#ref-vv6urccb" role="doc-biblioref">1</a>]</span> They demonstrated that this was a computationally efficient way of climate modeling, and it outperformed the traditional pattern downscaling method that tried to achieve the same results. This study showed that even a relatively simple statistical method could capture the temporal dynamics in climate modeling and was quite credible in applications such as impact assessment and others that did not necessarily depend on extremely accurate predictions. The limitation was that they only assumed a linear relationship between the input and output. In our study, we were able to use the random forest model which learned to capture more complex relationships by itself rather than us having to specify them manually.</p>
+<p>However, we should still point out that even though we were able to obtain a very small RMSE with more variables added, some of those variables might not be present in other earth system models. We need to avoid selecting such ones for adaptability to other models. In addition, since all of our data comes from the same earth system model (CESM), it is not clear if the emulator fit by this particular dataset will handle data from other models well. More extreme values of some variables may appear, which may not be well fit in random forest emulators. Fortunately, unlike ESMs, there is not much internal dynamics in urban parameterizations, which suggests predictions will not drift too far apart with the same set of input variables applied. <span class="citation" data-cites="aQXP0tzw">[<a href="#ref-aQXP0tzw" role="doc-biblioref">2</a>]</span> Other potential problems include the absence of urbanization trend in the emulator that will certainly influence the accuracy of urban temperature prediction. This cannot be solved by emulator improvement, but only by better urban parameterizations.</p>
+<p>Just like Reichstein et al suggested, future studies in earth science offers many opportunities to use machine learning and deep learning approaches to develop data-driven models that can leverage data sources more effectively and provide insights. Physically-guided emulators have a strong capability in this sense, although with many possible improvements to be made. <span class="citation" data-cites="HBaLZRD8">[<a href="#ref-HBaLZRD8" role="doc-biblioref">3</a>]</span></p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
-<div id="refs" role="doc-bibliography">
-
+<div id="refs" class="references hanging-indent" role="doc-bibliography">
+<div id="ref-vv6urccb">
+<p>1. <strong>Statistical Emulation of Climate Model Projections Based on Precomputed GCM Runs*</strong> <br />
+Stefano Castruccio, David J. McInerney, Michael L. Stein, Feifei Liu Crouch, Robert L. Jacob, Elisabeth J. Moyer<br />
+<em>Journal of Climate</em> (2014-03-01) <a href="https://doi.org/ghnj93">https://doi.org/ghnj93</a> <br />
+DOI: <a href="https://doi.org/10.1175/jcli-d-13-00099.1">10.1175/jcli-d-13-00099.1</a></p>
+</div>
+<div id="ref-aQXP0tzw">
+<p>2. <strong>Initial results from Phase 2 of the international urban energy balance model comparison</strong> <br />
+C. S. B. Grimmond, M. Blackett, M. J. Best, J.-J. Baik, S. E. Belcher, J. Beringer, S. I. Bohnenstengel, I. Calmet, F. Chen, A. Coutts, … N. Zhang<br />
+<em>International Journal of Climatology</em> (2011-02) <a href="https://doi.org/b2stht">https://doi.org/b2stht</a> <br />
+DOI: <a href="https://doi.org/10.1002/joc.2227">10.1002/joc.2227</a></p>
+</div>
+<div id="ref-HBaLZRD8">
+<p>3. <strong>Deep learning and process understanding for data-driven Earth system science</strong> <br />
+Markus Reichstein, Gustau Camps-Valls, Bjorn Stevens, Martin Jung, Joachim Denzler, Nuno Carvalhais, Prabhat<br />
+<em>Nature</em> (2019-02-13) <a href="https://doi.org/gfvhxk">https://doi.org/gfvhxk</a> <br />
+DOI: <a href="https://doi.org/10.1038/s41586-019-0912-1">10.1038/s41586-019-0912-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30760912">30760912</a></p>
+</div>
 </div>
 <h2 id="appendix-1-variable-definitions">Appendix 1: Variable Definitions</h2>
 <p>This table includes the full list of variables used in the models created and their definitions and units.</p>
