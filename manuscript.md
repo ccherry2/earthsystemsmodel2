@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/3937f87d631f45f02f9584b18e2f891ae4a29342/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3937f87d631f45f02f9584b18e2f891ae4a29342/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/3937f87d631f45f02f9584b18e2f891ae4a29342/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/7689dd3b9b243676eacdaced81805fc880308bd9/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/3937f87d631f45f02f9584b18e2f891ae4a29342/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@7689dd3](https://github.com/ccherry2/earthsystemsmodel2/tree/7689dd3b9b243676eacdaced81805fc880308bd9)
+from [ccherry2/earthsystemsmodel2@3937f87](https://github.com/ccherry2/earthsystemsmodel2/tree/3937f87d631f45f02f9584b18e2f891ae4a29342)
 on December 7, 2020.
 </em></small>
 
@@ -145,7 +145,7 @@ Climate change is projected to impose substantial impacts and climate-driven thr
 
 Urban areas take up a relatively small percentage of the Earth’s land cover but have disproportionately large impacts on the climate and on humans. They are major drivers of emissions and climate change, serve as economic and social centers around the world, and house most of the human population. However, the very nature of their small physical footprint makes it challenging to study their impact on humans and the environment accurately and comprehensively.
 
-To grapple with uncertainty and develop climate change mitigation and/or adaptation strategies, it is crucial for policymakers and planners for urban areas to understand different climate projections and scenarios, as well as urban-specific dynamics. Earth Systems Models (ESMs) are complex mathematical models that produce climate projections. They represent physical processes in the atmosphere, ocean, cryosphere, biogeochemical cycling in terrestrial and marine ecosystems, and interactions and feedbacks between these domains. These models are highly computationally demanding – taking long amounts of time and storage capacity to run over timescales of hundreds of years. This can make ESMs impractical for many uses, particularly policy analyses. Interested users may not have the capacity to utilize GCMs on a typical computer or reasonable budget. Deep learning has great potential to btter process the large amounts of data and computationally expensive nature of these models (Reichstein et al, 2019) [@reichstein2019]. 
+To grapple with uncertainty and develop climate change mitigation and/or adaptation strategies, it is crucial for policymakers and planners for urban areas to understand different climate projections and scenarios, as well as urban-specific dynamics. Earth Systems Models (ESMs) are complex mathematical models that produce climate projections. They represent physical processes in the atmosphere, ocean, cryosphere, biogeochemical cycling in terrestrial and marine ecosystems, and interactions and feedbacks between these domains. These models are highly computationally demanding – taking long amounts of time and storage capacity to run over timescales of hundreds of years. This can make ESMs impractical for many uses, particularly policy analyses. Interested users may not have the capacity to utilize GCMs on a typical computer or reasonable budget. Deep learning has great potential to btter process the large amounts of data and computationally expensive nature of these models (Reichstein et al, 2019) [@Reichstein2019]. 
 
 Currently, most state-of-the-art ESMs used today for climate change projections do not explicitly parameterize urban areas, largely due to their small area. While this does not significantly impact the quality of regular or large-scale studies, this lack of explicit parameterization limits our ability to adequately capture unique urban characteristics and dynamics. The Community Earth Systems Model (CESM) is one of the few state-of-the-art ESMs that explicitly parameterizes urban areas, with the latest version even distinguishing between three separate urban density classes. Most quantitative attributions have been typically done for non-urban surfaces, but effective development decisions and local actions to manage risks rely on robust urban climate projections. This is the motivation for us to use CESM, which has a representation of urban areas, to build a location dependent emulator, and apply it to other ESMs in order to get their urban temperature responses.
 
@@ -394,12 +394,11 @@ Just like Reichstein et al suggested, future studies in earth science offers man
 [@Reichstein2019]: doi:10.1038/s41586-019-0912-1
 
 
-## Appendix 1: Variable Definitions
+## Appendix: Variable Definitions
 
 This table includes the full list of variables used in the models created and their definitions and units.
 
-*Table A1: Variable Names and Definitions*
-<sub>
+*Table A: Variable Names and Definitions*
   
 
 | *Variable* | Unit          | Meaning          |
@@ -467,5 +466,3 @@ This table includes the full list of variables used in the models created and th
 | TSL | K | Temperature of near-surface soil layer |
 | TSOI_10CM | K | Soil temperature in top 10cm of soil |
 
-
-</sub>

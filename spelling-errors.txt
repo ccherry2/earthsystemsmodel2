@@ -42,7 +42,7 @@ heterotrophic
 HIA
 HUMIDEX
 hyperparameter
-hyperparameters
+Hyperparameters
 Imputer
 JJA
 joyceee
