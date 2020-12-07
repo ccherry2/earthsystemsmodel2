@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/71d6ebd5fb724837e629eaa313d52ab34144202d/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/0b961158934816561a355c71cfd3b7dc801a82d9/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@71d6ebd](https://github.com/ccherry2/earthsystemsmodel2/tree/71d6ebd5fb724837e629eaa313d52ab34144202d)
+from [ccherry2/earthsystemsmodel2@0b96115](https://github.com/ccherry2/earthsystemsmodel2/tree/0b961158934816561a355c71cfd3b7dc801a82d9)
 on December 7, 2020.
 </em></small>
 
@@ -133,11 +133,6 @@ on December 7, 2020.
   <small>
      Department of Civil Engineering, University of Illinois Urbana-Champaign
   </small>
-
-
-
-## Abstract {.page_break_before}
-
 
 
 
