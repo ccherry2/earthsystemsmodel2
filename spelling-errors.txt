@@ -36,7 +36,7 @@ geospatial
 Gridcell
 heterotrophic
 HIA
-HUMIDEX
+Humidex
 hyperparameter
 hyperparameters
 Imputer
@@ -54,7 +54,7 @@ OSFC
 parameterization
 parameterizes
 PBOT
-preprocessing
+Preprocessing
 QBOT
 QICE
 QIRRIG
