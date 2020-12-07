@@ -64,11 +64,11 @@ header-includes: '<!--
 
   <link rel="alternate" type="application/pdf" href="https://ccherry2.github.io/earthsystemsmodel2/manuscript.pdf" />
 
-  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
+  <link rel="alternate" type="text/html" href="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/" />
 
-  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/" />
+  <meta name="manubot_html_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/" />
 
-  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/manuscript.pdf" />
+  <meta name="manubot_pdf_url_versioned" content="https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/manuscript.pdf" />
 
   <meta property="og:type" content="article" />
 
@@ -103,9 +103,9 @@ title: Machine Learning for Earth Systems Model Emulation
 
 <small><em>
 This manuscript
-([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/884432b9f93b1bcc6885f5b882326ab2cbfb54ed/))
+([permalink](https://ccherry2.github.io/earthsystemsmodel2/v/d731ec85208af57bf9eb2bc8a763cfc500a07a1b/))
 was automatically generated
-from [ccherry2/earthsystemsmodel2@884432b](https://github.com/ccherry2/earthsystemsmodel2/tree/884432b9f93b1bcc6885f5b882326ab2cbfb54ed)
+from [ccherry2/earthsystemsmodel2@d731ec8](https://github.com/ccherry2/earthsystemsmodel2/tree/d731ec85208af57bf9eb2bc8a763cfc500a07a1b)
 on December 7, 2020.
 </em></small>
 
@@ -288,7 +288,7 @@ We can see that the best results (RMSE = 0.084 and 0.086) occurred in the runs w
 
 Neural Networks are more computationally demanding to run than Random Forests. So, fewer attempts were made to test different variable sets. Since all of the variables in the dataset are numerical values, no feature engineering was required. Instead, the Neural Networks were created using 4 layers with different numbers of units. All were activated using ‘relu’ and different hyperparameters were tested. The general format of the code used for the model is shown in the figure below.
 
-<center><img src="images/NN%20Setup.png" width="600" /></center>   
+<center><img src="images/NN%20Setup.PNG" width="600" /></center>   
 
 *<center>Figure 8: Neural Network Model Setup</center><br>* 
 
@@ -296,7 +296,7 @@ Three different variable sets were used in these Neural Networks, ranging from 2
 
 *Table 2: Neural Network Model Configurations and Metrics*
 | **Variables** | **Variable Count**        | **Metric**       | **Value**         |  **Layer Units** | **Hyperparameters**        |
-|:-----------------|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+|-----------------|-------------|:-------------|-------------|-------------|-------------|
 |lat, lon, FIRE_ICE, FSA, FSDS, FLDS, HUMIDEX, PBOT, QBOT, RAIN, RH2M, SABG, SOILWATER_10CM, SWBGT, SWBGT_R, SWBGT_U, TOPO_COL_ICE, U10, Vcmx25Z, WA, ZBOT, ZWT_CH4_UNSAT, ZWT_PERCH| 23 | RMSE | 0.44 | 128, 64, 32, 1  | LR=1e-4, Epochs=20, Batch_size=100 |
 | Day sin, Year sin, Year cos, FSDS, FLDS, RAIN, TBOT, PBOT, QBOT, U10 | 10 | MAE | 0.482 | 128, 32, 8, 1 | LR=0.1, Epochs=10, Batch_size=10 |
 | FSDS, FLDS, PBOT, QBOT, RAIN, TBOT, U10 | 7 | RMSE | 0.304 | 64, 32, 16, 1 | LR=0.008, Epochs=20, Batch_size=5000 |
