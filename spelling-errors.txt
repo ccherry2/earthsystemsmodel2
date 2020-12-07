@@ -10,6 +10,7 @@ dataset
 datetime
 DJF
 downscaling
+EDA
 EFLX
 ERRSEB
 ERRSOL
@@ -37,12 +38,13 @@ geospatial
 Gridcell
 heterotrophic
 HIA
-Humidex
+HUMIDEX
 hyperparameter
 hyperparameters
 Imputer
 JJA
 joyceee
+Kaggle
 landunits
 LH
 longwave
@@ -63,9 +65,11 @@ QICE
 QIRRIG
 QRUNOFF
 Reichstein
+relu
 RMSE
 SABG
 SFC
+SimpleImputer
 sklearn’s
 SNOWDP
 SOILWATER
@@ -76,6 +80,7 @@ TBUILD
 TG
 THBOT
 TOPO
+tradeoffs
 TREFMNAV
 TREFMXAV
 TSA
@@ -83,6 +88,7 @@ TSKIN
 TSL
 TSOI
 unitless
+UNSAT
 Urbana
 vcmax
 Vcmx
