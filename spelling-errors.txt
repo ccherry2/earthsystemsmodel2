@@ -1,6 +1,5 @@
 autotrophic
 biogeochemical
-btter
 ccherry
 CESM
 Champaign
@@ -42,7 +41,7 @@ heterotrophic
 HIA
 Humidex
 hyperparameter
-hyperparameters
+Hyperparameters
 Imputer
 JJA
 joyceee
@@ -61,7 +60,7 @@ parameterizations
 parameterizes
 PBOT
 precomputed
-Preprocessing
+preprocessing
 QBOT
 QICE
 QIRRIG
