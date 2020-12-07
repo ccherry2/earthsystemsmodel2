@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/ccherry2/earthsystemsmodel2/tree/gh-pages) branch hosts the contents of this directory at <https://ccherry2.github.io/earthsystemsmodel2/>.
-The permalink for this webpage version is <https://ccherry2.github.io/earthsystemsmodel2/v/d562b893708d39bac1bca501e9ca60a9bc8af578/>.
+The permalink for this webpage version is <https://ccherry2.github.io/earthsystemsmodel2/v/83c2501df8b4f177f84c273214edea237fd60e19/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://ccherry2.github.io/earthsystemsmodel2/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`d562b893708d39bac1bca501e9ca60a9bc8af578`](https://github.com/ccherry2/earthsystemsmodel2/commit/d562b893708d39bac1bca501e9ca60a9bc8af578).
+[`83c2501df8b4f177f84c273214edea237fd60e19`](https://github.com/ccherry2/earthsystemsmodel2/commit/83c2501df8b4f177f84c273214edea237fd60e19).
